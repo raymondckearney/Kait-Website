@@ -10,10 +10,10 @@ export default function BlockWordmark({ size = "md" }: BlockWordmarkProps) {
       className={`${styles.wordmark} ${size === "sm" ? styles.sm : styles.md}`}
     >
       <span className={styles.shapes} aria-hidden="true">
-        <span className={styles.square} />
-        <span className={styles.ball} />
-        <span className={styles.triangle} />
-        <span className={styles.arch} />
+        <span className={styles.square} data-shape="square" />
+        <span className={styles.ball} data-shape="ball" />
+        <span className={styles.triangle} data-shape="triangle" />
+        <span className={styles.arch} data-shape="arch" />
       </span>
       <span className={styles.wordText}>Kait Kearney, PhD</span>
     </span>
