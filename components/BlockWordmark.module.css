@@ -1,0 +1,84 @@
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shapes {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  flex: none;
+}
+
+.square {
+  background: var(--color-cobalt);
+  border-radius: 3px;
+  display: inline-block;
+  transform: rotate(-8deg);
+}
+
+.ball {
+  background: var(--color-red);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid var(--color-marigold);
+  display: inline-block;
+}
+
+.arch {
+  background: var(--color-green);
+  border-radius: 9px 9px 0 0;
+  display: inline-block;
+}
+
+.wordText {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* size: md (default) */
+.md .square,
+.md .ball {
+  width: 15px;
+  height: 15px;
+}
+.md .triangle {
+  border-left-width: 8px;
+  border-right-width: 8px;
+  border-bottom-width: 14px;
+}
+.md .arch {
+  width: 16px;
+  height: 9px;
+}
+.md .wordText {
+  font-size: 20px;
+}
+
+/* size: sm (footer) */
+.sm .square,
+.sm .ball {
+  width: 14px;
+  height: 14px;
+}
+.sm .triangle {
+  border-left-width: 8px;
+  border-right-width: 8px;
+  border-bottom-width: 13px;
+}
+.sm .arch {
+  width: 15px;
+  height: 8px;
+}
+.sm .wordText {
+  font-size: 19px;
+}

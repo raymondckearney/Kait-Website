@@ -1,0 +1,238 @@
+.floor {
+  position: relative;
+  height: 210px;
+}
+
+.shadow {
+  position: absolute;
+  bottom: -2px;
+  height: 14px;
+  background: rgba(26, 26, 26, 0.16);
+  border-radius: 50%;
+  filter: blur(5px);
+}
+
+.blockWrap {
+  position: absolute;
+  bottom: 0;
+}
+
+.squash {
+  transform-origin: bottom center;
+}
+
+.square {
+  width: 118px;
+  height: 118px;
+  background: var(--color-cobalt);
+  border: var(--border-feature);
+  border-radius: 16px;
+  box-shadow: inset -8px -10px 0 rgba(0, 0, 0, 0.14);
+}
+
+.ball {
+  width: 82px;
+  height: 82px;
+  background: var(--color-red);
+  border: var(--border-feature);
+  border-radius: 50%;
+  box-shadow: inset -7px -9px 0 rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  top: 30px;
+  width: 8px;
+  height: 12px;
+  background: var(--color-ink);
+  border-radius: 4px;
+}
+.eyeLeft {
+  left: 22px;
+}
+.eyeRight {
+  right: 22px;
+}
+.mouth {
+  position: absolute;
+  left: 34px;
+  top: 50px;
+  width: 12px;
+  height: 6px;
+  border-bottom: 2.5px solid var(--color-ink);
+  border-radius: 0 0 10px 10px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 56px solid transparent;
+  border-right: 56px solid transparent;
+  border-bottom: 98px solid var(--color-marigold);
+}
+
+.arch {
+  width: 118px;
+  height: 62px;
+  background: var(--color-green);
+  border: var(--border-feature);
+  border-radius: 62px 62px 0 0;
+  box-shadow: inset -8px -8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.smallBall {
+  width: 44px;
+  height: 44px;
+  background: var(--color-cobalt);
+  border: var(--border-feature);
+  border-radius: 50%;
+  box-shadow: inset -4px -5px 0 rgba(0, 0, 0, 0.14);
+}
+
+.stats {
+  position: absolute;
+  bottom: 0;
+  left: var(--container-pad);
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.statCard {
+  background: var(--color-card);
+  border: 2px solid var(--color-ink);
+  border-radius: 14px 14px 0 0;
+  padding: 18px 20px 14px;
+}
+
+.statNumber {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 12.5px;
+  color: var(--color-muted-text);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* --- Animations (front-loaded on load) --- */
+.animDrop {
+  animation: tumDrop 1.8s backwards;
+}
+.animSquash {
+  animation: tumSquash 1.8s backwards;
+}
+.animRoll {
+  animation: tumRoll 1s 2.4s backwards;
+}
+.animRise {
+  animation: tumRise 0.8s backwards;
+}
+.animBlink {
+  animation: tumBlink 4.5s 3s infinite;
+}
+
+/* Desktop absolute layout, matching mockup pixel positions at 1280px container */
+@media (min-width: 900px) {
+  .shadowSquare {
+    right: 40px;
+    width: 130px;
+  }
+  .shadowTriangle {
+    right: 235px;
+    width: 105px;
+  }
+  .shadowArch {
+    right: 415px;
+    width: 120px;
+  }
+  .shadowSmallBall {
+    left: 330px;
+    width: 95px;
+  }
+
+  .squareWrap {
+    right: 48px;
+  }
+  .ballWrap {
+    bottom: 120px;
+    right: 66px;
+  }
+  .triangleWrap {
+    right: 250px;
+  }
+  .archWrap {
+    right: 420px;
+  }
+  .smallBallWrap {
+    left: 348px;
+  }
+}
+
+/* Mobile / tablet: simplify to a flex row below headline, no absolute placement */
+@media (max-width: 899px) {
+  .floor {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+    padding-bottom: 32px;
+  }
+  .shadow {
+    display: none;
+  }
+  .blockWrap {
+    position: static;
+  }
+  .stats {
+    position: static;
+    left: auto;
+    width: 100%;
+    order: 10;
+  }
+  .square {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+  }
+  .ball {
+    width: 56px;
+    height: 56px;
+  }
+  .eye {
+    top: 20px;
+    width: 6px;
+    height: 8px;
+  }
+  .eyeLeft {
+    left: 15px;
+  }
+  .eyeRight {
+    right: 15px;
+  }
+  .mouth {
+    left: 23px;
+    top: 34px;
+    width: 8px;
+    height: 4px;
+  }
+  .triangle {
+    border-left-width: 34px;
+    border-right-width: 34px;
+    border-bottom-width: 60px;
+  }
+  .arch {
+    width: 72px;
+    height: 38px;
+  }
+  .smallBall {
+    width: 34px;
+    height: 34px;
+  }
+}

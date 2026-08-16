@@ -1,0 +1,62 @@
+.band {
+  border-bottom: 2px solid var(--color-ink);
+  overflow: hidden;
+  position: relative;
+}
+
+.cobalt {
+  background: var(--color-cobalt);
+  color: #ffffff;
+}
+.green {
+  background: var(--color-green);
+  color: #ffffff;
+}
+.marigold {
+  background: var(--color-marigold);
+  color: var(--color-ink);
+}
+.paper {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 84px var(--container-pad) 92px;
+  text-align: center;
+  position: relative;
+}
+
+.shapeSquare {
+  position: absolute;
+  left: 24px;
+  top: 56px;
+  width: 38px;
+  height: 38px;
+  background: var(--color-marigold);
+  border: 2px solid var(--color-ink);
+  border-radius: 9px;
+  transform: rotate(-12deg);
+  animation: tumIdle 5s ease-in-out infinite;
+}
+
+.shapeBall {
+  position: absolute;
+  right: 40px;
+  bottom: 52px;
+  width: 34px;
+  height: 34px;
+  background: var(--color-red);
+  border: 2px solid var(--color-ink);
+  border-radius: 50%;
+  animation: tumIdle 6s 1.2s ease-in-out infinite;
+}
+
+@media (max-width: 640px) {
+  .shapeSquare,
+  .shapeBall {
+    display: none;
+  }
+}

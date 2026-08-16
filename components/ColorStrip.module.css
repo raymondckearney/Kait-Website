@@ -1,0 +1,9 @@
+.strip {
+  display: flex;
+  height: 16px;
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.segment {
+  min-width: 4px;
+}

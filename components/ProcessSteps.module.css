@@ -1,0 +1,90 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: end;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  background: var(--color-paper);
+  border: var(--border-feature);
+  border-radius: 16px 16px 0 0;
+  padding: 24px 22px 20px;
+}
+
+.top.dark {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.label {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.body {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--color-body-text);
+}
+.top.dark .body {
+  color: var(--color-paper);
+  opacity: 0.85;
+}
+
+.base {
+  border: var(--border-feature);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+}
+
+.base.step1 {
+  height: 44px;
+  background: var(--color-cobalt);
+}
+.base.step2 {
+  height: 88px;
+  background: var(--color-red);
+}
+.base.step3 {
+  height: 132px;
+  background: var(--color-green);
+}
+.base.step4 {
+  height: 176px;
+  background: var(--color-paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.baseDot {
+  width: 34px;
+  height: 34px;
+  background: var(--color-cobalt);
+  border: 2px solid var(--color-ink);
+  border-radius: 50%;
+  display: inline-block;
+  animation: tumIdle 4s ease-in-out infinite;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .base.step1,
+  .base.step2,
+  .base.step3 {
+    height: 24px;
+  }
+  .base.step4 {
+    height: 60px;
+  }
+}

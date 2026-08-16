@@ -1,0 +1,81 @@
+.base {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, color 0.2s;
+  min-height: 44px;
+  border: none;
+}
+
+.base:hover {
+  transform: translateY(-3px);
+}
+
+.base:active {
+  transform: translateY(1px);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--color-marigold);
+  border-radius: 50%;
+  display: inline-block;
+  flex: none;
+}
+
+/* Primary: ink fill, paper text */
+.primary {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-size: 16.5px;
+  padding: 17px 32px;
+}
+.primary:hover {
+  background: var(--color-cobalt);
+  color: #ffffff;
+}
+
+/* Secondary: transparent, ink border */
+.secondary {
+  background: transparent;
+  color: var(--color-ink);
+  font-size: 16.5px;
+  padding: 15px 28px;
+  border: 2px solid var(--color-ink);
+}
+.secondary:hover {
+  background: var(--color-marigold);
+  color: var(--color-ink);
+}
+
+/* On dark bands: marigold fill + ink text + ink border */
+.onDark {
+  background: var(--color-marigold);
+  color: var(--color-ink);
+  font-weight: 800;
+  font-size: 17px;
+  padding: 18px 34px;
+  border: 2px solid var(--color-ink);
+}
+.onDark:hover {
+  background: #ffffff;
+  color: var(--color-ink);
+}
+
+/* Ghost: for "on dark" secondary — border only, no fill */
+.ghost {
+  background: transparent;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 18px 30px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
+.ghost:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}

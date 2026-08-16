@@ -1,0 +1,251 @@
+.hero {
+  border-bottom: 2px solid var(--color-ink);
+  background: var(--color-paper);
+  overflow: hidden;
+}
+
+.heroGrid {
+  padding: 88px var(--container-pad) 84px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--color-marigold);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  animation: tumRise 0.7s 0.05s backwards;
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(44px, 5.6vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin: 24px 0 22px;
+  animation: tumRise 0.8s 0.15s backwards;
+}
+
+.h1Accent {
+  color: var(--color-red);
+}
+
+.lead {
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--color-body-text);
+  max-width: 540px;
+  margin: 0 0 16px;
+  animation: tumRise 0.8s 0.3s backwards;
+}
+
+.lead:last-of-type {
+  margin-bottom: 34px;
+  animation-delay: 0.45s;
+}
+
+.photoWrap {
+  position: relative;
+  animation: tumRise 0.9s 0.3s backwards;
+}
+
+.photoShapeSquare {
+  position: absolute;
+  left: -26px;
+  top: -22px;
+  width: 60px;
+  height: 60px;
+  background: var(--color-cobalt);
+  border: var(--border-feature);
+  border-radius: 14px;
+  transform: rotate(-10deg);
+  animation: tumIdle 5s ease-in-out infinite;
+}
+
+.photoShapeTriangle {
+  position: absolute;
+  right: -18px;
+  bottom: 60px;
+  width: 0;
+  height: 0;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-bottom: 38px solid var(--color-marigold);
+  animation: tumIdle 6s 1s ease-in-out infinite;
+}
+
+/* ---------- Credentials (marigold band) ---------- */
+.credentialsSection {
+  background: var(--color-marigold);
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.sectionInner {
+  padding: 92px var(--container-pad) 84px;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(34px, 4.2vw, 52px);
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+
+.credentialsLead {
+  font-size: 18px;
+  color: var(--color-about-body);
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 0 52px;
+}
+
+.credentialsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.credentialCard {
+  background: var(--color-paper);
+  border: var(--border-feature);
+  border-radius: var(--radius-card-sm);
+  padding: 28px 24px;
+}
+
+.credentialIcon {
+  margin-bottom: 16px;
+}
+
+.credentialTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.credentialBody {
+  font-size: 14.5px;
+  color: var(--color-body-text);
+  line-height: 1.55;
+}
+
+/* ---------- How I work ---------- */
+.workSection {
+  background: var(--color-paper);
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.workGrid {
+  padding: 96px var(--container-pad) 90px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.workHeadingRow {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.workHeadingIcon {
+  width: 26px;
+  height: 26px;
+  background: var(--color-cobalt);
+  border: 2px solid var(--color-ink);
+  border-radius: 6px;
+  transform: rotate(-8deg);
+  flex: none;
+  animation: tumSway 4s ease-in-out infinite;
+}
+
+.workH2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(34px, 4.2vw, 50px);
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+  margin: 0;
+}
+
+.workList {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.workItem {
+  display: flex;
+  gap: 20px;
+}
+
+.workIcon {
+  width: 44px;
+  height: 44px;
+  border: 2.5px solid var(--color-ink);
+  flex: none;
+}
+
+.workItemTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.workItemBody {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--color-body-text);
+  margin: 0;
+}
+
+/* ---------- Off the clock band ---------- */
+.offHeading {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 3.4vw, 42px);
+  letter-spacing: -0.015em;
+  margin: 0 0 18px;
+}
+
+.offBody {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.94;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .heroGrid,
+  .workGrid {
+    grid-template-columns: 1fr;
+  }
+  .photoWrap {
+    order: -1;
+  }
+  .credentialsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .credentialsGrid {
+    grid-template-columns: 1fr;
+  }
+}

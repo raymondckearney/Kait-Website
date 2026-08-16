@@ -1,0 +1,378 @@
+import Link from "next/link";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import ColorStrip from "@/components/ColorStrip";
+import Reveal from "@/components/Reveal";
+import Button from "@/components/Button";
+import Band from "@/components/Band";
+import PolaroidPhoto from "@/components/PolaroidPhoto";
+import HeroBlocks from "@/components/HeroBlocks";
+import ProcessSteps from "@/components/ProcessSteps";
+import styles from "./page.module.css";
+
+const SERVICE_CARDS = [
+  {
+    tone: "cobalt",
+    eyebrow: "For your child",
+    title: "Play therapy",
+    body: "Kids work through big feelings the way they know best — play. Warm, structured sessions that build real skills without feeling like an appointment.",
+    href: "/services",
+    cta: "Explore play therapy →",
+  },
+  {
+    tone: "red",
+    eyebrow: "For you & your child, together",
+    title: "PCIT",
+    body: "Parent-Child Interaction Therapy: live, in-the-moment coaching while you and your child play — real guidance for the hardest moments, as they happen.",
+    href: "/services",
+    cta: "Explore PCIT →",
+  },
+  {
+    tone: "marigold",
+    eyebrow: "Testing & assessment",
+    title: "Neuropsychological evaluations",
+    body: "Thorough, tailored testing that shows how your child's brain works — and exactly what support they need at school and at home.",
+    href: "/evaluations",
+    cta: "Explore evaluations →",
+  },
+  {
+    tone: "green",
+    eyebrow: "For your child's school",
+    title: "School consultation",
+    body: "I work directly with teachers and schools so the plan follows your child into the classroom — where they spend most of their day.",
+    href: "/services",
+    cta: "Explore consultation →",
+  },
+] as const;
+
+const STEPS: [
+  { label: string; body: string },
+  { label: string; body: string },
+  { label: string; body: string },
+  { label: string; body: string }
+] = [
+  {
+    label: "1 · Free call",
+    body: "Fifteen minutes. You talk, I listen, we decide if we're a fit.",
+  },
+  {
+    label: "2 · First visit",
+    body: "Your child plays; I observe and assess. Parents join for part of it.",
+  },
+  {
+    label: "3 · The plan",
+    body: "A written plan in plain English: goals, methods, and your part at home.",
+  },
+  {
+    label: "4 · Real change",
+    body: "Weekly sessions, check-ins, and adjustments until it sticks.",
+  },
+];
+
+export default function HomePage() {
+  return (
+    <>
+      <Nav active="home" />
+      <main>
+        {/* HERO */}
+        <header className={styles.hero}>
+          <div className={`container ${styles.heroInner}`}>
+            <div className={styles.heroText}>
+              <div className={styles.badge}>
+                Child &amp; family psychology · New York City
+              </div>
+              <h1 className={styles.h1}>
+                <span className={styles.h1Line}>Big feelings.</span>
+                <span className={styles.h1Line}>
+                  Bigger <span className={styles.h1Accent}>support</span>
+                  <span className={styles.h1Dot} aria-hidden="true" />
+                </span>
+              </h1>
+              <p className={styles.lead}>
+                Play therapy, parent coaching, and neuropsychological evaluations — with a
+                plan your whole family can actually follow. No judgment, just steady,
+                evidence-based help.
+              </p>
+              <div className={styles.heroCtas}>
+                <Button href="/contact" withDot>
+                  Start with a free call
+                </Button>
+                <Button href="/services" variant="secondary">
+                  See how I help
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <HeroBlocks />
+          </div>
+        </header>
+
+        <ColorStrip
+          segments={[
+            { color: "var(--color-cobalt)", flex: 2 },
+            { color: "var(--color-red)", flex: 1 },
+            { color: "var(--color-marigold)", flex: 3 },
+            { color: "var(--color-green)", flex: 1.5 },
+            { color: "var(--color-red)", flex: 1 },
+          ]}
+        />
+
+        {/* SERVICES */}
+        <section className={styles.servicesSection}>
+          <div className={`container ${styles.sectionInner}`}>
+            <Reveal as="div" className={styles.sectionTitleRow}>
+              <span className={styles.sectionTitleIcon} aria-hidden="true" />
+              <h2 className={styles.h2}>Four ways I help</h2>
+            </Reveal>
+            <Reveal as="p" className={styles.sectionLead}>
+              From the playroom to the classroom — therapy, coaching, testing, and school
+              support that connect to one plan.
+            </Reveal>
+
+            <div className={styles.servicesGrid}>
+              {SERVICE_CARDS.map((card) => (
+                <Reveal as="div" key={card.title} className={styles.serviceCardWrap}>
+                  <Link
+                    href={card.href}
+                    className={`${styles.serviceCard} ${styles[card.tone]}`}
+                  >
+                    <div className={styles.serviceIcons} aria-hidden="true">
+                      <ServiceIcon tone={card.tone} />
+                    </div>
+                    <div className={styles.serviceEyebrow}>{card.eyebrow}</div>
+                    <h3 className={styles.serviceTitle}>{card.title}</h3>
+                    <p className={styles.serviceBody}>{card.body}</p>
+                    <span className={styles.serviceCta}>{card.cta}</span>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal as="div" className={styles.notSure}>
+              <span className={styles.notSureDot} aria-hidden="true" />
+              Not sure which fits?{" "}
+              <Link href="/contact" className={styles.notSureLink}>
+                The free 15-minute call sorts it out.
+              </Link>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* HOW IT WORKS */}
+        <section className={styles.howSection}>
+          <div className={`container ${styles.sectionInner}`}>
+            <Reveal as="h2" className={styles.h2}>
+              We build it one block at a time
+            </Reveal>
+            <Reveal as="p" className={styles.howLead}>
+              No mystery, no endless intake process. Here&apos;s exactly how the first
+              month goes.
+            </Reveal>
+            <ProcessSteps steps={STEPS} dotColor="var(--color-red)" />
+          </div>
+        </section>
+
+        {/* ABOUT TEASER */}
+        <section className={styles.aboutSection}>
+          <div className={`container ${styles.aboutGrid}`}>
+            <Reveal as="div" className={styles.aboutPhotoWrap}>
+              <PolaroidPhoto caption="Dr. Kait Kearney" rotate={-1.5} height={440} />
+              <div className={styles.aboutShapeSquare} aria-hidden="true" />
+              <div className={styles.aboutShapeTriangle} aria-hidden="true" />
+            </Reveal>
+            <div>
+              <Reveal as="div" className={styles.aboutBadge}>
+                <span className={styles.aboutBadgeDot} aria-hidden="true" />
+                Meet your psychologist
+              </Reveal>
+              <Reveal as="h2" className={styles.aboutH2}>
+                The doctor kids ask to come back and see
+              </Reveal>
+              <Reveal as="p" className={styles.aboutBody}>
+                I&apos;m Kait — licensed clinical psychologist, seven years in practice,
+                and a firm believer that therapy should feel more like building something
+                than fixing someone.
+              </Reveal>
+              <Reveal as="p" className={styles.aboutBody}>
+                Parents tell me two things: their kid actually looks forward to sessions,
+                and they finally feel like they know what to do at home. That&apos;s the
+                whole job.
+              </Reveal>
+              <Reveal as="div" className={styles.aboutPills}>
+                <span className={styles.pill}>PhD, Clinical Psychology</span>
+                <span className={styles.pill}>Licensed in New York</span>
+                <span className={styles.pill}>In-person &amp; telehealth</span>
+              </Reveal>
+              <Reveal as="div">
+                <Button href="/about">More about me →</Button>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* QUOTE */}
+        <Band tone="green" decorative>
+          <Reveal
+            as="div"
+            style={{
+              fontFamily: "var(--font-display)",
+              fontWeight: 800,
+              fontSize: "clamp(26px, 3.4vw, 40px)",
+              lineHeight: 1.25,
+              letterSpacing: "-0.015em",
+            }}
+          >
+            &ldquo;Parenthood is hard. There is so much advice out there — and most of it
+            misses what would make it work for real families: a plan, and follow-up.&rdquo;
+          </Reveal>
+          <Reveal
+            as="div"
+            style={{ marginTop: 26, fontWeight: 700, fontSize: 15.5, opacity: 0.9 }}
+          >
+            Kait Kearney · on why she started the practice
+          </Reveal>
+        </Band>
+
+        {/* FINAL CTA */}
+        <section className={styles.ctaSection}>
+          <div className={`container ${styles.ctaGrid}`}>
+            <div className={styles.ctaTextCol}>
+              <Reveal as="h2" className={styles.ctaH2}>
+                Start with one small block
+              </Reveal>
+              <Reveal as="p" className={styles.ctaLead}>
+                A free 15-minute call. No paperwork, no pressure, no waitlist limbo — just
+                a conversation about what&apos;s going on at home.
+              </Reveal>
+              <Reveal as="div" className={styles.ctaButtons}>
+                <Button href="/contact" variant="onDark">
+                  Book the free call
+                </Button>
+                <Button href="tel:+15551234567" variant="ghost">
+                  (555) 123-4567
+                </Button>
+              </Reveal>
+            </div>
+            <div className={styles.ctaShapes} aria-hidden="true">
+              <div className={styles.ctaShapeBig} />
+              <div className={styles.ctaShapeSquare} />
+              <div className={styles.ctaShapeArch} />
+              <div className={styles.ctaShapeBall} />
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] }) {
+  switch (tone) {
+    case "cobalt":
+      return (
+        <>
+          <span
+            style={{
+              width: 48,
+              height: 48,
+              background: "var(--color-marigold)",
+              border: "2px solid var(--color-ink)",
+              borderRadius: 12,
+              display: "inline-block",
+              animation: "tumTickle 5s 1s ease-in-out infinite",
+            }}
+          />
+          <span
+            style={{
+              width: 26,
+              height: 26,
+              background: "var(--color-red)",
+              border: "2px solid var(--color-ink)",
+              borderRadius: "50%",
+              display: "inline-block",
+            }}
+          />
+        </>
+      );
+    case "red":
+      return (
+        <>
+          <span
+            style={{
+              width: 48,
+              height: 27,
+              background: "var(--color-green)",
+              border: "2px solid var(--color-ink)",
+              borderRadius: "27px 27px 0 0",
+              display: "inline-block",
+              animation: "tumTickle 5s 2s ease-in-out infinite",
+            }}
+          />
+          <span
+            style={{
+              width: 0,
+              height: 0,
+              borderLeft: "15px solid transparent",
+              borderRight: "15px solid transparent",
+              borderBottom: "27px solid var(--color-marigold)",
+              display: "inline-block",
+            }}
+          />
+        </>
+      );
+    case "marigold":
+      return (
+        <>
+          <span
+            style={{
+              width: 48,
+              height: 48,
+              background: "var(--color-cobalt)",
+              border: "2px solid var(--color-ink)",
+              borderRadius: "50%",
+              display: "inline-block",
+              animation: "tumTickle 5s 1.5s ease-in-out infinite",
+            }}
+          />
+          <span
+            style={{
+              width: 26,
+              height: 26,
+              background: "var(--color-paper)",
+              border: "2px solid var(--color-ink)",
+              borderRadius: 6,
+              display: "inline-block",
+              transform: "rotate(8deg)",
+            }}
+          />
+        </>
+      );
+    case "green":
+      return (
+        <>
+          <span
+            style={{
+              width: 0,
+              height: 0,
+              borderLeft: "24px solid transparent",
+              borderRight: "24px solid transparent",
+              borderBottom: "42px solid var(--color-marigold)",
+              display: "inline-block",
+            }}
+          />
+          <span
+            style={{
+              width: 26,
+              height: 26,
+              background: "var(--color-red)",
+              border: "2px solid var(--color-ink)",
+              borderRadius: "50%",
+              display: "inline-block",
+            }}
+          />
+        </>
+      );
+  }
+}

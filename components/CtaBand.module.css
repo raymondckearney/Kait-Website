@@ -1,0 +1,41 @@
+.band {
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.cobalt {
+  background: var(--color-cobalt);
+  color: #ffffff;
+}
+.paper {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 88px var(--container-pad);
+  text-align: center;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 50px);
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+}
+
+.body {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.cobalt .body {
+  opacity: 0.94;
+}
+.paper .body {
+  color: var(--color-body-text);
+}

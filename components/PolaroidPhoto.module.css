@@ -1,0 +1,67 @@
+.frame {
+  position: relative;
+  border: var(--border-feature);
+  border-radius: var(--radius-card);
+  background: var(--color-card);
+  padding: 14px;
+}
+
+.slot {
+  width: 100%;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #f0ebdd,
+    #f0ebdd 12px,
+    #f7f2e8 12px,
+    #f7f2e8 24px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted-text);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  padding: 24px;
+}
+
+.captionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 6px 2px;
+}
+
+.captionText {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.captionDots {
+  display: flex;
+  gap: 5px;
+}
+
+.dotSquare {
+  width: 13px;
+  height: 13px;
+  background: var(--color-cobalt);
+  border-radius: 3px;
+  display: inline-block;
+}
+.dotBall {
+  width: 13px;
+  height: 13px;
+  background: var(--color-red);
+  border-radius: 50%;
+  display: inline-block;
+}
+.dotArch {
+  width: 14px;
+  height: 8px;
+  background: var(--color-green);
+  border-radius: 8px 8px 0 0;
+  display: inline-block;
+}

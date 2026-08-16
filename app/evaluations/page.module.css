@@ -1,0 +1,188 @@
+.hero {
+  background: var(--color-cobalt);
+  color: #ffffff;
+  border-bottom: 2px solid var(--color-ink);
+  overflow: hidden;
+}
+
+.heroInner {
+  padding: 88px var(--container-pad) 84px;
+  position: relative;
+}
+
+.heroShapeSquare {
+  position: absolute;
+  right: 60px;
+  top: 74px;
+  width: 74px;
+  height: 74px;
+  background: var(--color-marigold);
+  border: var(--border-feature);
+  border-radius: 16px;
+  transform: rotate(10deg);
+  animation: tumIdle 5s ease-in-out infinite;
+}
+
+.heroShapeBall {
+  position: absolute;
+  right: 190px;
+  bottom: 64px;
+  width: 52px;
+  height: 52px;
+  background: var(--color-red);
+  border: var(--border-feature);
+  border-radius: 50%;
+  animation: tumIdle 6s 1s ease-in-out infinite;
+}
+
+.heroShapeTriangle {
+  position: absolute;
+  right: 310px;
+  top: 116px;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 52px solid var(--color-green);
+  animation: tumIdle 5.5s 0.5s ease-in-out infinite;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  background: var(--color-marigold);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  animation: tumRise 0.7s 0.05s backwards;
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin: 24px 0 20px;
+  max-width: 780px;
+  animation: tumRise 0.8s 0.15s backwards;
+}
+
+.lead {
+  font-size: 19px;
+  line-height: 1.65;
+  opacity: 0.94;
+  max-width: 600px;
+  margin: 0;
+  animation: tumRise 0.8s 0.3s backwards;
+}
+
+/* ---------- Questions grid ---------- */
+.questionsSection {
+  background: var(--color-paper);
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.sectionInner {
+  padding: 90px var(--container-pad) 84px;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 48px);
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+
+.sectionLead {
+  font-size: 17.5px;
+  color: var(--color-body-text);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 0 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  border: var(--border-feature);
+  border-radius: var(--radius-card-sm);
+  padding: 28px 26px;
+  background: #ffffff;
+}
+
+.cardIcon {
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.cardBody {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-body-text);
+  margin: 0;
+}
+
+/* ---------- How it works (marigold band) ---------- */
+.howSection {
+  background: var(--color-marigold);
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.howLead {
+  font-size: 18px;
+  color: var(--color-about-body);
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 0 56px;
+  font-weight: 500;
+}
+
+/* ---------- Experience band ---------- */
+.experienceHeading {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(26px, 3.2vw, 38px);
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+
+.experienceBody {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.94;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroShapeSquare,
+  .heroShapeBall,
+  .heroShapeTriangle {
+    display: none;
+  }
+}

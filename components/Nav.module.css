@@ -1,0 +1,169 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-paper);
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brandLink {
+  display: flex;
+  align-items: center;
+  color: var(--color-ink);
+  padding: 16px 0;
+  min-height: 44px;
+}
+.brandLink:hover {
+  color: var(--color-ink);
+}
+
+.links {
+  display: none;
+  align-items: stretch;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.link,
+.active {
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  border-left: 2px solid var(--color-ink);
+  transition: background 0.15s, color 0.15s;
+  color: var(--color-ink);
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.link.services:hover {
+  background: var(--color-marigold);
+  color: var(--color-ink);
+}
+.link.evaluations:hover {
+  background: var(--color-cobalt);
+}
+.link.about:hover {
+  background: var(--color-red);
+}
+.link.contact:hover {
+  background: var(--color-green);
+}
+
+.active.services {
+  background: var(--color-marigold);
+  color: var(--color-ink);
+}
+.active.evaluations {
+  background: var(--color-cobalt);
+  color: #ffffff;
+}
+.active.about {
+  background: var(--color-red);
+  color: #ffffff;
+}
+.active.contact {
+  background: var(--color-green);
+  color: #ffffff;
+}
+
+.cta {
+  background: var(--color-cobalt);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 26px;
+  border-left: 2px solid var(--color-ink);
+  transition: background 0.15s;
+  font-weight: 700;
+}
+.cta:hover {
+  background: var(--color-red);
+  color: #ffffff;
+}
+
+.menuToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 2px solid var(--color-ink);
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.menuToggleBars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 20px;
+}
+.menuToggleBars span {
+  display: block;
+  height: 2px;
+  background: var(--color-ink);
+  border-radius: 1px;
+}
+
+.mobilePanel {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--color-ink);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.mobileLink,
+.mobileActive {
+  padding: 16px var(--container-pad);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.12);
+  color: var(--color-ink);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.mobileActive.services {
+  background: var(--color-marigold);
+}
+.mobileActive.evaluations {
+  background: var(--color-cobalt);
+  color: #ffffff;
+}
+.mobileActive.about {
+  background: var(--color-red);
+  color: #ffffff;
+}
+.mobileActive.contact {
+  background: var(--color-green);
+  color: #ffffff;
+}
+
+.mobileCta {
+  padding: 16px var(--container-pad);
+  background: var(--color-cobalt);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+@media (min-width: 900px) {
+  .links {
+    display: flex;
+  }
+  .menuToggle {
+    display: none;
+  }
+}
