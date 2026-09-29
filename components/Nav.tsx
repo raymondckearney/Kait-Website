@@ -9,7 +9,6 @@ export type ActivePage = "home" | "services" | "evaluations" | "about" | "contac
 
 const NAV_ITEMS: { key: ActivePage; label: string; href: string }[] = [
   { key: "services", label: "Services", href: "/services" },
-  { key: "evaluations", label: "Evaluations", href: "/evaluations" },
   { key: "about", label: "About", href: "/about" },
   { key: "contact", label: "Contact", href: "/contact" },
 ];
@@ -50,7 +49,7 @@ export default function Nav({ active }: NavProps) {
             )
           )}
           <Link href={ctaHref} className={styles.cta}>
-            Book a free call
+            Start with a free call
           </Link>
         </div>
 
@@ -97,7 +96,7 @@ export default function Nav({ active }: NavProps) {
             className={styles.mobileCta}
             onClick={() => setOpen(false)}
           >
-            Book a free call
+            Start with a free call
           </Link>
         </div>
       )}

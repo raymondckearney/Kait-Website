@@ -6,7 +6,7 @@
 }
 
 .heroInner {
-  padding: 84px var(--container-pad) 0;
+  padding: 48px var(--container-pad) 0;
 }
 
 .heroText {
@@ -32,10 +32,10 @@
 .h1 {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(52px, 7vw, 92px);
+  font-size: clamp(52px, min(7vw, 9vh), 92px);
   line-height: 0.98;
   letter-spacing: -0.025em;
-  margin: 26px 0 24px;
+  margin: 18px 0 16px;
 }
 
 .h1Line {
@@ -56,12 +56,12 @@
 
 .h1Dot {
   display: inline-block;
-  width: 0.55em;
-  height: 0.55em;
+  width: 0.4em;
+  height: 0.4em;
   background: var(--color-cobalt);
   border-radius: 50%;
   animation: tumPop 0.5s 1.1s backwards;
-  margin-left: 0.14em;
+  margin-left: 0.12em;
 }
 
 .lead {
@@ -69,7 +69,7 @@
   line-height: 1.55;
   color: var(--color-body-text);
   max-width: 560px;
-  margin: 0 0 34px;
+  margin: 0 0 22px;
   animation: tumRise 0.8s 0.45s backwards;
 }
 
@@ -77,8 +77,25 @@
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 72px;
+  margin-bottom: 32px;
   animation: tumRise 0.8s 0.6s backwards;
+}
+
+/* Extra headroom trim for short viewports, so the falling blocks still
+   finish landing without needing to scroll. */
+@media (max-height: 760px) and (min-width: 900px) {
+  .heroInner {
+    padding-top: 28px;
+  }
+  .h1 {
+    margin: 12px 0 10px;
+  }
+  .lead {
+    margin-bottom: 14px;
+  }
+  .heroCtas {
+    margin-bottom: 18px;
+  }
 }
 
 /* ---------- Services grid ---------- */

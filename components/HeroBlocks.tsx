@@ -159,21 +159,14 @@ export default function HeroBlocks() {
         <div className={styles.smallBall} />
       </div>
 
-      {/* stat blocks sit on the floor too */}
+      {/* stat block sits on the floor too */}
       <div className={styles.stats}>
         <div
           className={styles.statCard}
           style={{ animation: "tumRise 0.8s 2s backwards" }}
         >
           <div className={styles.statNumber}>All ages</div>
-          <div className={styles.statLabel}>kids to young adults — and parents</div>
-        </div>
-        <div
-          className={styles.statCard}
-          style={{ animation: "tumRise 0.8s 2.15s backwards" }}
-        >
-          <div className={styles.statNumber}>7 yrs</div>
-          <div className={styles.statLabel}>licensed practice</div>
+          <div className={styles.statLabel}>children to young adults — and parents</div>
         </div>
       </div>
     </div>

@@ -14,18 +14,18 @@ const SERVICE_CARDS = [
   {
     tone: "cobalt",
     eyebrow: "For your child",
-    title: "Play therapy",
-    body: "Kids work through big feelings the way they know best — play. Warm, structured sessions that build real skills without feeling like an appointment.",
+    title: "Individual therapy",
+    body: "Children working through big feelings in warm, structured sessions that build real skills without feeling like an appointment.",
     href: "/services",
-    cta: "Explore play therapy →",
+    cta: "Explore individual therapy →",
   },
   {
     tone: "red",
     eyebrow: "For you & your child, together",
-    title: "PCIT",
-    body: "Parent-Child Interaction Therapy: live, in-the-moment coaching while you and your child play — real guidance for the hardest moments, as they happen.",
+    title: "Parent Coaching",
+    body: "Real guidance for the hardest moments.",
     href: "/services",
-    cta: "Explore PCIT →",
+    cta: "Explore parent coaching →",
   },
   {
     tone: "marigold",
@@ -57,15 +57,15 @@ const STEPS: [
   },
   {
     label: "2 · First visit",
-    body: "Your child plays; I observe and assess. Parents join for part of it.",
+    body: "Individual session with your child to observe, assess, and begin building rapport. Parents join for part of it.",
   },
   {
     label: "3 · The plan",
     body: "A written plan in plain English: goals, methods, and your part at home.",
   },
   {
-    label: "4 · Real change",
-    body: "Weekly sessions, check-ins, and adjustments until it sticks.",
+    label: "4 · The work",
+    body: "Weekly sessions, check-ins, and adjustments along the way.",
   },
 ];
 
@@ -89,9 +89,8 @@ export default function HomePage() {
                 </span>
               </h1>
               <p className={styles.lead}>
-                Play therapy, parent coaching, and neuropsychological evaluations — with a
-                plan your whole family can actually follow. No judgment, just steady,
-                evidence-based help.
+                Individual therapy, neuropsychological evaluations, parent coaching —
+                with a plan your whole family can follow.
               </p>
               <div className={styles.heroCtas}>
                 <Button href="/contact" withDot>
@@ -126,8 +125,8 @@ export default function HomePage() {
               <h2 className={styles.h2}>Four ways I help</h2>
             </Reveal>
             <Reveal as="p" className={styles.sectionLead}>
-              From the playroom to the classroom — therapy, coaching, testing, and school
-              support that connect to one plan.
+              From the therapy room to the classroom — individual therapy, testing,
+              parent coaching, and school support that connect to one plan.
             </Reveal>
 
             <div className={styles.servicesGrid}>
@@ -148,14 +147,6 @@ export default function HomePage() {
                 </Reveal>
               ))}
             </div>
-
-            <Reveal as="div" className={styles.notSure}>
-              <span className={styles.notSureDot} aria-hidden="true" />
-              Not sure which fits?{" "}
-              <Link href="/contact" className={styles.notSureLink}>
-                The free 15-minute call sorts it out.
-              </Link>
-            </Reveal>
           </div>
         </section>
 
@@ -166,8 +157,7 @@ export default function HomePage() {
               We build it one block at a time
             </Reveal>
             <Reveal as="p" className={styles.howLead}>
-              No mystery, no endless intake process. Here&apos;s exactly how the first
-              month goes.
+              Here&apos;s exactly how the first month goes.
             </Reveal>
             <ProcessSteps steps={STEPS} dotColor="var(--color-red)" />
           </div>
@@ -187,17 +177,13 @@ export default function HomePage() {
                 Meet your psychologist
               </Reveal>
               <Reveal as="h2" className={styles.aboutH2}>
-                The doctor kids ask to come back and see
+                The doctor children ask to come back and see
               </Reveal>
               <Reveal as="p" className={styles.aboutBody}>
-                I&apos;m Kait — licensed clinical psychologist, seven years in practice,
-                and a firm believer that therapy should feel more like building something
-                than fixing someone.
-              </Reveal>
-              <Reveal as="p" className={styles.aboutBody}>
-                Parents tell me two things: their kid actually looks forward to sessions,
-                and they finally feel like they know what to do at home. That&apos;s the
-                whole job.
+                I&apos;m a firm believer that therapy should feel more like building
+                something than fixing someone. Parents tell me two things: their child
+                actually looks forward to sessions, and they finally feel like they know
+                what to do at home. That&apos;s the whole job.
               </Reveal>
               <Reveal as="div" className={styles.aboutPills}>
                 <span className={styles.pill}>PhD, Clinical Psychology</span>
@@ -223,8 +209,9 @@ export default function HomePage() {
               letterSpacing: "-0.015em",
             }}
           >
-            &ldquo;Parenthood is hard. There is so much advice out there — and most of it
-            misses what would make it work for real families: a plan, and follow-up.&rdquo;
+            &ldquo;When a child is struggling, the whole family feels it. There&apos;s so
+            much advice out there — and most of it misses what would make it work for
+            real families: a plan and follow-up.&rdquo;
           </Reveal>
           <Reveal
             as="div"
@@ -242,12 +229,11 @@ export default function HomePage() {
                 Start with one small block
               </Reveal>
               <Reveal as="p" className={styles.ctaLead}>
-                A free 15-minute call. No paperwork, no pressure, no waitlist limbo — just
-                a conversation about what&apos;s going on at home.
+                A 15-minute call. No paperwork, no pressure, no waitlist limbo.
               </Reveal>
               <Reveal as="div" className={styles.ctaButtons}>
                 <Button href="/contact" variant="onDark">
-                  Book the free call
+                  Start with a free call
                 </Button>
                 <Button href="tel:+15551234567" variant="ghost">
                   (555) 123-4567

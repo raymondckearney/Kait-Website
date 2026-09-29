@@ -1,6 +1,6 @@
 .floor {
   position: relative;
-  height: 210px;
+  height: 168px;
 }
 
 .shadow {
@@ -22,72 +22,72 @@
 }
 
 .square {
-  width: 118px;
-  height: 118px;
+  width: 96px;
+  height: 96px;
   background: var(--color-cobalt);
   border: var(--border-feature);
-  border-radius: 16px;
-  box-shadow: inset -8px -10px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 13px;
+  box-shadow: inset -6px -8px 0 rgba(0, 0, 0, 0.14);
 }
 
 .ball {
-  width: 82px;
-  height: 82px;
+  width: 66px;
+  height: 66px;
   background: var(--color-red);
   border: var(--border-feature);
   border-radius: 50%;
-  box-shadow: inset -7px -9px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: inset -6px -7px 0 rgba(0, 0, 0, 0.12);
   position: relative;
 }
 
 .eye {
   position: absolute;
-  top: 30px;
-  width: 8px;
-  height: 12px;
+  top: 24px;
+  width: 6px;
+  height: 10px;
   background: var(--color-ink);
   border-radius: 4px;
 }
 .eyeLeft {
-  left: 22px;
+  left: 18px;
 }
 .eyeRight {
-  right: 22px;
+  right: 18px;
 }
 .mouth {
   position: absolute;
-  left: 34px;
-  top: 50px;
-  width: 12px;
-  height: 6px;
-  border-bottom: 2.5px solid var(--color-ink);
+  left: 27px;
+  top: 40px;
+  width: 10px;
+  height: 5px;
+  border-bottom: 2px solid var(--color-ink);
   border-radius: 0 0 10px 10px;
 }
 
 .triangle {
   width: 0;
   height: 0;
-  border-left: 56px solid transparent;
-  border-right: 56px solid transparent;
-  border-bottom: 98px solid var(--color-marigold);
+  border-left: 44px solid transparent;
+  border-right: 44px solid transparent;
+  border-bottom: 78px solid var(--color-marigold);
 }
 
 .arch {
-  width: 118px;
-  height: 62px;
+  width: 96px;
+  height: 50px;
   background: var(--color-green);
   border: var(--border-feature);
-  border-radius: 62px 62px 0 0;
-  box-shadow: inset -8px -8px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 50px 50px 0 0;
+  box-shadow: inset -6px -6px 0 rgba(0, 0, 0, 0.12);
 }
 
 .smallBall {
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   background: var(--color-cobalt);
   border: var(--border-feature);
   border-radius: 50%;
-  box-shadow: inset -4px -5px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: inset -3px -4px 0 rgba(0, 0, 0, 0.14);
 }
 
 .stats {
@@ -137,40 +137,42 @@
   animation: tumBlink 4.5s 3s infinite;
 }
 
-/* Desktop absolute layout, matching mockup pixel positions at 1280px container */
+/* Desktop absolute layout — scaled down ~0.8x from the original mockup
+   pixel positions so the whole composition lands within the viewport
+   without scrolling on most screen sizes. */
 @media (min-width: 900px) {
   .shadowSquare {
-    right: 40px;
-    width: 130px;
+    right: 32px;
+    width: 104px;
   }
   .shadowTriangle {
-    right: 235px;
-    width: 105px;
+    right: 190px;
+    width: 84px;
   }
   .shadowArch {
-    right: 415px;
-    width: 120px;
+    right: 332px;
+    width: 96px;
   }
   .shadowSmallBall {
-    left: 330px;
-    width: 95px;
+    left: 264px;
+    width: 76px;
   }
 
   .squareWrap {
-    right: 48px;
+    right: 38px;
   }
   .ballWrap {
-    bottom: 120px;
-    right: 66px;
+    bottom: 96px;
+    right: 54px;
   }
   .triangleWrap {
-    right: 250px;
+    right: 200px;
   }
   .archWrap {
-    right: 420px;
+    right: 336px;
   }
   .smallBallWrap {
-    left: 348px;
+    left: 278px;
   }
 }
 
