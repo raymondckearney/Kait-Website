@@ -17,11 +17,6 @@
   padding: 24px 22px 20px;
 }
 
-.top.dark {
-  background: var(--color-ink);
-  color: var(--color-paper);
-}
-
 .label {
   font-family: var(--font-display);
   font-weight: 800;
@@ -33,10 +28,6 @@
   font-size: 14.5px;
   line-height: 1.55;
   color: var(--color-body-text);
-}
-.top.dark .body {
-  color: var(--color-paper);
-  opacity: 0.85;
 }
 
 .base {
@@ -59,20 +50,7 @@
 }
 .base.step4 {
   height: 176px;
-  background: var(--color-paper);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.baseDot {
-  width: 34px;
-  height: 34px;
-  background: var(--color-cobalt);
-  border: 2px solid var(--color-ink);
-  border-radius: 50%;
-  display: inline-block;
-  animation: tumIdle 4s ease-in-out infinite;
+  background: var(--color-marigold);
 }
 
 @media (max-width: 900px) {

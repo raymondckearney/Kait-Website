@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useId, useRef } from "react";
 import styles from "./HeroBlocks.module.css";
 
 const MOBILE_QUERY = "(max-width: 899px)";
@@ -24,6 +24,7 @@ export default function HeroBlocks() {
   const archOuterRef = useRef<HTMLDivElement>(null);
   const archSquashRef = useRef<HTMLDivElement>(null);
   const smallBallOuterRef = useRef<HTMLDivElement>(null);
+  const triangleClipId = useId();
 
   useEffect(() => {
     const isMobile = window.matchMedia(MOBILE_QUERY).matches;
@@ -131,7 +132,27 @@ export default function HeroBlocks() {
           className={styles.squash}
           style={{ animation: "tumSquash 1.8s 1s backwards" }}
         >
-          <div className={styles.triangle} />
+          <svg className={styles.triangle} viewBox="0 0 88 78" aria-hidden="true">
+            <defs>
+              <clipPath id={triangleClipId}>
+                <polygon points="44,1.5 2.5,76.5 85.5,76.5" />
+              </clipPath>
+            </defs>
+            <polygon
+              points="44,1.5 2.5,76.5 85.5,76.5"
+              fill="var(--color-marigold)"
+              stroke="var(--color-ink)"
+              strokeWidth="2.5"
+              vectorEffect="non-scaling-stroke"
+            />
+            <g clipPath={`url(#${triangleClipId})`}>
+              <polygon
+                points="44,1.5 2.5,76.5 85.5,76.5"
+                fill="rgba(0,0,0,0.12)"
+                transform="translate(7,8)"
+              />
+            </g>
+          </svg>
         </div>
       </div>
 

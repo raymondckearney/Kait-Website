@@ -1,6 +1,16 @@
 .floor {
   position: relative;
-  height: 168px;
+  height: 208px;
+}
+
+/* On taller viewports, grow the floor so the hero's bottom edge (and the
+   color strip after it) tracks the fold instead of leaving a fixed gap
+   that shrinks as a share of a taller window and lets the next section
+   peek through before any scrolling. */
+@media (min-width: 900px) {
+  .floor {
+    height: clamp(208px, calc(100vh - 560px), 420px);
+  }
 }
 
 .shadow {
@@ -65,11 +75,10 @@
 }
 
 .triangle {
-  width: 0;
-  height: 0;
-  border-left: 44px solid transparent;
-  border-right: 44px solid transparent;
-  border-bottom: 78px solid var(--color-marigold);
+  display: block;
+  width: 88px;
+  height: 78px;
+  overflow: visible;
 }
 
 .arch {
@@ -154,7 +163,7 @@
     width: 96px;
   }
   .shadowSmallBall {
-    left: 264px;
+    left: 330px;
     width: 76px;
   }
 
@@ -172,7 +181,7 @@
     right: 336px;
   }
   .smallBallWrap {
-    left: 278px;
+    left: 344px;
   }
 }
 
@@ -225,9 +234,8 @@
     height: 4px;
   }
   .triangle {
-    border-left-width: 34px;
-    border-right-width: 34px;
-    border-bottom-width: 60px;
+    width: 68px;
+    height: 60px;
   }
   .arch {
     width: 72px;

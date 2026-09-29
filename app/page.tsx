@@ -186,7 +186,7 @@ export default function HomePage() {
             <Reveal as="p" className={styles.howLead}>
               Here&apos;s exactly how the first month goes.
             </Reveal>
-            <ProcessSteps steps={STEPS} dotColor="var(--color-red)" />
+            <ProcessSteps steps={STEPS} />
           </div>
         </section>
 
@@ -233,15 +233,9 @@ export default function HomePage() {
               letterSpacing: "-0.015em",
             }}
           >
-            &ldquo;When a child is struggling, the whole family feels it. There&apos;s so
-            much advice out there — and most of it misses what would make it work for
-            real families: a plan and follow-up.&rdquo;
-          </Reveal>
-          <Reveal
-            as="div"
-            style={{ marginTop: 26, fontWeight: 700, fontSize: 15.5, opacity: 0.9 }}
-          >
-            Kait Kearney · on why she started the practice
+            When a child is struggling, the whole family feels it. There&apos;s so much
+            advice out there — and most of it misses what would make it work for real
+            families: a plan and follow-up.
           </Reveal>
         </Band>
 
@@ -370,6 +364,7 @@ function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] })
               borderRight: "24px solid transparent",
               borderBottom: "42px solid var(--color-marigold)",
               display: "inline-block",
+              animation: "tumTickle 5s 0.5s ease-in-out infinite",
             }}
           />
           <span

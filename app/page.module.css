@@ -256,9 +256,13 @@
 
 .chips {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 12px;
   margin-top: 28px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
 .chip {
@@ -271,6 +275,8 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  flex: none;
+  white-space: nowrap;
 }
 
 .chipDot {
