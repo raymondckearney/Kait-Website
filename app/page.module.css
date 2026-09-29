@@ -254,36 +254,29 @@
   color: var(--color-paper);
 }
 
-.notSure {
+.chips {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 28px;
-  font-size: 16px;
-  color: var(--color-body-text);
-  font-weight: 600;
-  text-align: center;
   flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
 }
 
-.notSureDot {
-  width: 14px;
-  height: 14px;
-  background: var(--color-green);
+.chip {
+  background: #ffffff;
   border: 2px solid var(--color-ink);
-  border-radius: 50%;
-  display: inline-block;
-  flex: none;
+  border-radius: var(--radius-pill);
+  padding: 11px 22px;
+  font-weight: 700;
+  font-size: 15.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.notSureLink {
-  font-weight: 800;
-  color: var(--color-ink);
-  border-bottom: 3px solid var(--color-marigold);
-}
-.notSureLink:hover {
-  color: var(--color-red);
+.chipDot {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
 }
 
 /* ---------- How it works ---------- */

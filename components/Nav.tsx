@@ -5,21 +5,24 @@ import Link from "next/link";
 import BlockWordmark from "./BlockWordmark";
 import styles from "./Nav.module.css";
 
-export type ActivePage = "home" | "services" | "evaluations" | "about" | "contact";
+export type ActivePage = "home" | "evaluations";
 
-const NAV_ITEMS: { key: ActivePage; label: string; href: string }[] = [
-  { key: "services", label: "Services", href: "/services" },
-  { key: "about", label: "About", href: "/about" },
-  { key: "contact", label: "Contact", href: "/contact" },
+// Services, About, and Contact are anchors on the Home page; Evaluations
+// is the only remaining standalone route and the only item that can
+// show as "active".
+const NAV_ITEMS: { key: string; label: string; href: string; page?: ActivePage }[] = [
+  { key: "services", label: "Services", href: "/#services" },
+  { key: "evaluations", label: "Evaluations", href: "/evaluations", page: "evaluations" },
+  { key: "about", label: "About", href: "/#about" },
+  { key: "contact", label: "Contact", href: "/#contact" },
 ];
 
 type NavProps = {
-  active: ActivePage;
+  active?: ActivePage;
 };
 
-export default function Nav({ active }: NavProps) {
+export default function Nav({ active = "home" }: NavProps) {
   const [open, setOpen] = useState(false);
-  const ctaHref = active === "contact" ? "#form" : "/contact";
 
   return (
     <nav className={styles.nav}>
@@ -30,7 +33,7 @@ export default function Nav({ active }: NavProps) {
 
         <div className={styles.links}>
           {NAV_ITEMS.map((item) =>
-            active === item.key ? (
+            item.page && active === item.page ? (
               <span
                 key={item.key}
                 className={`${styles.active} ${styles[item.key]}`}
@@ -48,9 +51,6 @@ export default function Nav({ active }: NavProps) {
               </Link>
             )
           )}
-          <Link href={ctaHref} className={styles.cta}>
-            Start with a free call
-          </Link>
         </div>
 
         <button
@@ -72,7 +72,7 @@ export default function Nav({ active }: NavProps) {
       {open && (
         <div id="mobile-nav-panel" className={styles.mobilePanel}>
           {NAV_ITEMS.map((item) =>
-            active === item.key ? (
+            item.page && active === item.page ? (
               <span
                 key={item.key}
                 className={`${styles.mobileActive} ${styles[item.key]}`}
@@ -91,13 +91,6 @@ export default function Nav({ active }: NavProps) {
               </Link>
             )
           )}
-          <Link
-            href={ctaHref}
-            className={styles.mobileCta}
-            onClick={() => setOpen(false)}
-          >
-            Start with a free call
-          </Link>
         </div>
       )}
     </nav>

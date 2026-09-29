@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Shantell_Sans, Atkinson_Hyperlegible } from "next/font/google";
+import AnchorScrollHandler from "@/components/AnchorScrollHandler";
 import "./globals.css";
 
 const shantellSans = Shantell_Sans({
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     default: "Kait Kearney, PhD · Child & Family Psychology, NYC",
   },
   description:
-    "Play therapy, parent coaching, and neuropsychological evaluations for children and families in New York City — with a plan your whole family can actually follow.",
+    "Individual therapy, parent coaching, and neuropsychological evaluations for children and families in New York City — with a plan your whole family can follow.",
 };
 
 export default function RootLayout({
@@ -38,7 +39,10 @@ export default function RootLayout({
       lang="en"
       className={`${shantellSans.variable} ${atkinsonHyperlegible.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <AnchorScrollHandler />
+      </body>
     </html>
   );
 }

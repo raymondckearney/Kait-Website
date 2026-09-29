@@ -21,16 +21,16 @@ export default function Footer() {
         <div className={styles.columns}>
           <nav className={styles.column} aria-label="Footer pages">
             <span className={styles.columnHead}>Pages</span>
-            <Link href="/services" className={styles.pageLink}>
+            <Link href="/#services" className={styles.pageLink}>
               Services
             </Link>
             <Link href="/evaluations" className={styles.pageLink}>
               Evaluations
             </Link>
-            <Link href="/about" className={styles.pageLink}>
+            <Link href="/#about" className={styles.pageLink}>
               About
             </Link>
-            <Link href="/contact" className={styles.pageLink}>
+            <Link href="/#contact" className={styles.pageLink}>
               Contact
             </Link>
           </nav>

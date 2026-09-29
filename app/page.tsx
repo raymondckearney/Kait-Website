@@ -16,16 +16,16 @@ const SERVICE_CARDS = [
     eyebrow: "For your child",
     title: "Individual therapy",
     body: "Children working through big feelings in warm, structured sessions that build real skills without feeling like an appointment.",
-    href: "/services",
-    cta: "Explore individual therapy →",
+    href: "#contact",
+    cta: "Ask about individual therapy →",
   },
   {
     tone: "red",
     eyebrow: "For you & your child, together",
     title: "Parent Coaching",
     body: "Real guidance for the hardest moments.",
-    href: "/services",
-    cta: "Explore parent coaching →",
+    href: "#contact",
+    cta: "Ask about parent coaching →",
   },
   {
     tone: "marigold",
@@ -40,8 +40,8 @@ const SERVICE_CARDS = [
     eyebrow: "For your child's school",
     title: "School consultation",
     body: "I work directly with teachers and schools so the plan follows your child into the classroom — where they spend most of their day.",
-    href: "/services",
-    cta: "Explore consultation →",
+    href: "#contact",
+    cta: "Ask about school consultation →",
   },
 ] as const;
 
@@ -69,6 +69,17 @@ const STEPS: [
   },
 ];
 
+const CONCERNS = [
+  { label: "ADHD", color: "var(--color-cobalt)", shape: "square" },
+  { label: "Anxiety", color: "var(--color-red)", shape: "circle" },
+  { label: "Depression", color: "var(--color-marigold)", shape: "square" },
+  { label: "OCD", color: "var(--color-green)", shape: "circle" },
+  { label: "ARFID", color: "var(--color-cobalt)", shape: "circle" },
+  { label: "Autism", color: "var(--color-red)", shape: "square" },
+  { label: "Disruptive behavior", color: "var(--color-marigold)", shape: "circle" },
+  { label: "Learning difficulties", color: "var(--color-green)", shape: "square" },
+] as const;
+
 export default function HomePage() {
   return (
     <>
@@ -93,10 +104,10 @@ export default function HomePage() {
                 with a plan your whole family can follow.
               </p>
               <div className={styles.heroCtas}>
-                <Button href="/contact" withDot>
+                <Button href="#contact" withDot>
                   Start with a free call
                 </Button>
-                <Button href="/services" variant="secondary">
+                <Button href="#services" variant="secondary">
                   See how I help
                 </Button>
               </div>
@@ -118,7 +129,7 @@ export default function HomePage() {
         />
 
         {/* SERVICES */}
-        <section className={styles.servicesSection}>
+        <section id="services" className={styles.servicesSection}>
           <div className={`container ${styles.sectionInner}`}>
             <Reveal as="div" className={styles.sectionTitleRow}>
               <span className={styles.sectionTitleIcon} aria-hidden="true" />
@@ -147,6 +158,22 @@ export default function HomePage() {
                 </Reveal>
               ))}
             </div>
+
+            <Reveal as="div" className={styles.chips}>
+              {CONCERNS.map((concern) => (
+                <span key={concern.label} className={styles.chip}>
+                  <span
+                    className={styles.chipDot}
+                    style={{
+                      background: concern.color,
+                      borderRadius: concern.shape === "circle" ? "50%" : "3px",
+                    }}
+                    aria-hidden="true"
+                  />
+                  {concern.label}
+                </span>
+              ))}
+            </Reveal>
           </div>
         </section>
 
@@ -164,7 +191,7 @@ export default function HomePage() {
         </section>
 
         {/* ABOUT TEASER */}
-        <section className={styles.aboutSection}>
+        <section id="about" className={styles.aboutSection}>
           <div className={`container ${styles.aboutGrid}`}>
             <Reveal as="div" className={styles.aboutPhotoWrap}>
               <PolaroidPhoto caption="Dr. Kait Kearney" rotate={-1.5} height={440} />
@@ -189,9 +216,6 @@ export default function HomePage() {
                 <span className={styles.pill}>PhD, Clinical Psychology</span>
                 <span className={styles.pill}>Licensed in New York</span>
                 <span className={styles.pill}>In-person &amp; telehealth</span>
-              </Reveal>
-              <Reveal as="div">
-                <Button href="/about">More about me →</Button>
               </Reveal>
             </div>
           </div>
@@ -222,7 +246,7 @@ export default function HomePage() {
         </Band>
 
         {/* FINAL CTA */}
-        <section className={styles.ctaSection}>
+        <section id="contact" className={styles.ctaSection}>
           <div className={`container ${styles.ctaGrid}`}>
             <div className={styles.ctaTextCol}>
               <Reveal as="h2" className={styles.ctaH2}>
@@ -232,7 +256,7 @@ export default function HomePage() {
                 A 15-minute call. No paperwork, no pressure, no waitlist limbo.
               </Reveal>
               <Reveal as="div" className={styles.ctaButtons}>
-                <Button href="/contact" variant="onDark">
+                <Button href="mailto:kaitkearneyphd@gmail.com" variant="onDark">
                   Start with a free call
                 </Button>
                 <Button href="tel:+15551234567" variant="ghost">

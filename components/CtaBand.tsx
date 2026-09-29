@@ -10,13 +10,13 @@ type CtaBandProps = {
   buttonHref?: string;
 };
 
-/** Shared closing CTA band — "book the free call" — used on Services, Evaluations, About. */
+/** Shared closing CTA band — used on the Evaluations page. */
 export default function CtaBand({
   tone,
   heading,
   body,
-  buttonLabel = "Book the free call",
-  buttonHref = "/contact",
+  buttonLabel = "Start with a free call",
+  buttonHref = "/#contact",
 }: CtaBandProps) {
   return (
     <section className={`${styles.band} ${styles[tone]}`}>

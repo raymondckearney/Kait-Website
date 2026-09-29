@@ -66,6 +66,13 @@
   padding-right: var(--container-pad);
 }
 
+/* Keeps the sticky nav from covering a section jumped to via #hash link. */
+#services,
+#about,
+#contact {
+  scroll-margin-top: 104px;
+}
+
 .visuallyHidden {
   position: absolute;
   width: 1px;
@@ -78,15 +85,10 @@
   border: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
+/* Smooth scrolling for in-page hash links is handled in JS by
+   AnchorScrollHandler, scoped to same-page anchors only — a blanket
+   `scroll-behavior: smooth` here would also animate Next.js's own
+   scroll-to-top on route changes, turning it into a jarring slide. */
 
 html,
 body {
