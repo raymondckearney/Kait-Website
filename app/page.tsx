@@ -8,6 +8,7 @@ import Band from "@/components/Band";
 import PolaroidPhoto from "@/components/PolaroidPhoto";
 import HeroBlocks from "@/components/HeroBlocks";
 import ProcessSteps from "@/components/ProcessSteps";
+import Triangle from "@/components/Triangle";
 import styles from "./page.module.css";
 
 const SERVICE_CARDS = [
@@ -159,20 +160,28 @@ export default function HomePage() {
               ))}
             </div>
 
-            <Reveal as="div" className={styles.chips}>
-              {CONCERNS.map((concern) => (
-                <span key={concern.label} className={styles.chip}>
-                  <span
-                    className={styles.chipDot}
-                    style={{
-                      background: concern.color,
-                      borderRadius: concern.shape === "circle" ? "50%" : "3px",
-                    }}
-                    aria-hidden="true"
-                  />
-                  {concern.label}
-                </span>
-              ))}
+            <Reveal as="div" className={styles.chipsViewport}>
+              <div className={styles.chipsTrack}>
+                {[0, 1].map((setIndex) =>
+                  CONCERNS.map((concern) => (
+                    <span
+                      key={`${setIndex}-${concern.label}`}
+                      className={styles.chip}
+                      aria-hidden={setIndex === 1 ? "true" : undefined}
+                    >
+                      <span
+                        className={styles.chipDot}
+                        style={{
+                          background: concern.color,
+                          borderRadius: concern.shape === "circle" ? "50%" : "3px",
+                        }}
+                        aria-hidden="true"
+                      />
+                      {concern.label}
+                    </span>
+                  ))
+                )}
+              </div>
             </Reveal>
           </div>
         </section>
@@ -196,7 +205,13 @@ export default function HomePage() {
             <Reveal as="div" className={styles.aboutPhotoWrap}>
               <PolaroidPhoto caption="Dr. Kait Kearney" rotate={-1.5} height={440} />
               <div className={styles.aboutShapeSquare} aria-hidden="true" />
-              <div className={styles.aboutShapeTriangle} aria-hidden="true" />
+              <Triangle
+                width={48}
+                height={42}
+                color="var(--color-green)"
+                strokeWidth={2.5}
+                className={styles.aboutShapeTriangle}
+              />
             </Reveal>
             <div>
               <Reveal as="div" className={styles.aboutBadge}>
@@ -314,16 +329,7 @@ function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] })
               animation: "tumTickle 5s 2s ease-in-out infinite",
             }}
           />
-          <span
-            style={{
-              width: 0,
-              height: 0,
-              borderLeft: "15px solid transparent",
-              borderRight: "15px solid transparent",
-              borderBottom: "27px solid var(--color-marigold)",
-              display: "inline-block",
-            }}
-          />
+          <Triangle width={30} height={27} color="var(--color-marigold)" strokeWidth={2} />
         </>
       );
     case "marigold":
@@ -356,16 +362,12 @@ function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] })
     case "green":
       return (
         <>
-          <span
-            style={{
-              width: 0,
-              height: 0,
-              borderLeft: "24px solid transparent",
-              borderRight: "24px solid transparent",
-              borderBottom: "42px solid var(--color-marigold)",
-              display: "inline-block",
-              animation: "tumTickle 5s 0.5s ease-in-out infinite",
-            }}
+          <Triangle
+            width={48}
+            height={42}
+            color="var(--color-marigold)"
+            strokeWidth={2}
+            style={{ animation: "tumTickle 5s 0.5s ease-in-out infinite" }}
           />
           <span
             style={{

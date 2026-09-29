@@ -254,15 +254,53 @@
   color: var(--color-paper);
 }
 
-.chips {
+.chipsViewport {
+  margin-top: 28px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 32px,
+    black calc(100% - 32px),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 32px,
+    black calc(100% - 32px),
+    transparent
+  );
+}
+
+.chipsTrack {
   display: flex;
   flex-wrap: nowrap;
   gap: 12px;
-  margin-top: 28px;
-  overflow-x: auto;
-  padding-bottom: 6px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+  width: max-content;
+  animation: chipsMarquee 32s linear infinite;
+}
+
+.chipsTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes chipsMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chipsTrack {
+    animation: none;
+  }
+  .chipsViewport {
+    overflow-x: auto;
+  }
 }
 
 .chip {
@@ -335,11 +373,6 @@
   position: absolute;
   left: -20px;
   bottom: 36px;
-  width: 0;
-  height: 0;
-  border-left: 24px solid transparent;
-  border-right: 24px solid transparent;
-  border-bottom: 42px solid var(--color-green);
   animation: tumIdle 6s 1s ease-in-out infinite;
 }
 

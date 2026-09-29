@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import Band from "@/components/Band";
 import CtaBand from "@/components/CtaBand";
 import ProcessSteps from "@/components/ProcessSteps";
+import Triangle from "@/components/Triangle";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -47,18 +48,7 @@ const QUESTIONS = [
     body: "Learning differences, processing speed, and where a bright kid keeps getting stuck.",
   },
   {
-    icon: (
-      <span
-        style={{
-          width: 0,
-          height: 0,
-          borderLeft: "18px solid transparent",
-          borderRight: "18px solid transparent",
-          borderBottom: "32px solid var(--color-marigold)",
-          display: "inline-block",
-        }}
-      />
-    ),
+    icon: <Triangle width={36} height={32} color="var(--color-marigold)" strokeWidth={2} />,
     title: `"Could this be autism?"`,
     body: "A careful, developmental picture of social communication, flexibility, and strengths.",
   },
@@ -146,7 +136,13 @@ export default function EvaluationsPage() {
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.heroShapeSquare} aria-hidden="true" />
             <div className={styles.heroShapeBall} aria-hidden="true" />
-            <div className={styles.heroShapeTriangle} aria-hidden="true" />
+            <Triangle
+              width={60}
+              height={52}
+              color="var(--color-green)"
+              strokeWidth={2.5}
+              className={styles.heroShapeTriangle}
+            />
             <div className={styles.badge}>Neuropsychological evaluations</div>
             <h1 className={styles.h1}>See how your child&apos;s brain works</h1>
             <p className={styles.lead}>
