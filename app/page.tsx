@@ -206,7 +206,6 @@ export default function HomePage() {
               <PolaroidPhoto
                 caption="Dr. Kait Kearney"
                 rotate={-1.5}
-                height={440}
                 src="/images/kait-kearney.webp"
               />
               <div className={styles.aboutShapeSquare} aria-hidden="true" />
