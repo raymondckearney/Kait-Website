@@ -203,7 +203,12 @@ export default function HomePage() {
         <section id="about" className={styles.aboutSection}>
           <div className={`container ${styles.aboutGrid}`}>
             <Reveal as="div" className={styles.aboutPhotoWrap}>
-              <PolaroidPhoto caption="Dr. Kait Kearney" rotate={-1.5} height={440} />
+              <PolaroidPhoto
+                caption="Dr. Kait Kearney"
+                rotate={-1.5}
+                height={440}
+                src="/images/kait-kearney.webp"
+              />
               <div className={styles.aboutShapeSquare} aria-hidden="true" />
               <Triangle
                 width={48}
