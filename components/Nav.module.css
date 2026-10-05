@@ -29,6 +29,7 @@
   align-items: stretch;
   font-weight: 700;
   font-size: 15px;
+  border-right: 2px solid var(--color-ink);
 }
 
 .link,
