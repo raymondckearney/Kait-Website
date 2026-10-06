@@ -12,11 +12,11 @@
 
 .heroShapeSquare {
   position: absolute;
-  right: 72px;
-  top: 56px;
+  right: 120px;
+  bottom: 0;
   width: 74px;
   height: 74px;
-  background: var(--color-marigold);
+  background: var(--color-green);
   border: var(--border-feature);
   border-radius: 16px;
   transform: rotate(10deg);
@@ -25,8 +25,8 @@
 
 .heroShapeBall {
   position: absolute;
-  right: 150px;
-  bottom: 48px;
+  right: 48px;
+  bottom: 0;
   width: 52px;
   height: 52px;
   background: var(--color-cobalt);
@@ -37,8 +37,8 @@
 
 .heroShapeTriangle {
   position: absolute;
-  right: 48px;
-  bottom: 160px;
+  right: 220px;
+  bottom: 0;
   animation: tumIdle 5.5s 0.5s ease-in-out infinite;
 }
 
