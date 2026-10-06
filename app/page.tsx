@@ -16,7 +16,7 @@ const SERVICE_CARDS = [
     tone: "cobalt",
     eyebrow: "For your child",
     title: "Individual therapy",
-    body: "Children working through big feelings in warm, structured sessions that build real skills without feeling like an appointment.",
+    body: "Children and teens working through big feelings in warm, structured sessions that build real skills without feeling like an appointment.",
     href: "#contact",
     cta: "Ask about individual therapy →",
   },
