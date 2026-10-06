@@ -112,7 +112,9 @@ export default function ContactForm() {
       <form className={styles.fields} onSubmit={handleSubmit} noValidate>
         <div className={styles.fieldRow}>
           <label className={styles.label} htmlFor={`${formId}-firstName`}>
-            First name <span className={styles.required}>*</span>
+            <span className={styles.labelText}>
+              First name <span className={styles.required}>*</span>
+            </span>
             <input
               id={`${formId}-firstName`}
               className={styles.input}
@@ -123,7 +125,9 @@ export default function ContactForm() {
             />
           </label>
           <label className={styles.label} htmlFor={`${formId}-lastName`}>
-            Last name <span className={styles.required}>*</span>
+            <span className={styles.labelText}>
+              Last name <span className={styles.required}>*</span>
+            </span>
             <input
               id={`${formId}-lastName`}
               className={styles.input}
@@ -137,7 +141,9 @@ export default function ContactForm() {
 
         <div className={styles.fieldRow}>
           <label className={styles.label} htmlFor={`${formId}-cellPhone`}>
-            Cell phone <span className={styles.required}>*</span>
+            <span className={styles.labelText}>
+              Cell phone <span className={styles.required}>*</span>
+            </span>
             <input
               id={`${formId}-cellPhone`}
               className={styles.input}
@@ -149,7 +155,9 @@ export default function ContactForm() {
             />
           </label>
           <label className={styles.label} htmlFor={`${formId}-email`}>
-            Email <span className={styles.required}>*</span>
+            <span className={styles.labelText}>
+              Email <span className={styles.required}>*</span>
+            </span>
             <input
               id={`${formId}-email`}
               className={styles.input}

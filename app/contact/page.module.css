@@ -8,13 +8,12 @@
 .heroInner {
   padding: 88px var(--container-pad) 84px;
   position: relative;
-  max-width: 760px;
 }
 
 .heroShapeSquare {
   position: absolute;
-  right: 60px;
-  top: 74px;
+  right: 72px;
+  top: 56px;
   width: 74px;
   height: 74px;
   background: var(--color-marigold);
@@ -26,8 +25,8 @@
 
 .heroShapeBall {
   position: absolute;
-  right: 190px;
-  bottom: 64px;
+  right: 150px;
+  bottom: 48px;
   width: 52px;
   height: 52px;
   background: var(--color-cobalt);
@@ -38,8 +37,8 @@
 
 .heroShapeTriangle {
   position: absolute;
-  right: 310px;
-  top: 116px;
+  right: 48px;
+  bottom: 160px;
   animation: tumIdle 5.5s 0.5s ease-in-out infinite;
 }
 
@@ -66,6 +65,7 @@
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin: 20px 0 16px;
+  max-width: 640px;
   animation: tumRise 0.8s 0.15s backwards;
 }
 
