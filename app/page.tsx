@@ -272,8 +272,8 @@ export default function HomePage() {
                 <Button href="mailto:kaitkearneyphd@gmail.com" variant="onDark">
                   Start with a free call
                 </Button>
-                <Button href="tel:+15551234567" variant="ghost">
-                  (555) 123-4567
+                <Button href="tel:+19295152147" variant="ghost">
+                  (929) 515-2147
                 </Button>
               </Reveal>
             </div>

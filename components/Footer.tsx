@@ -2,11 +2,10 @@ import Link from "next/link";
 import BlockWordmark from "./BlockWordmark";
 import styles from "./Footer.module.css";
 
-// TODO(kait): confirm real practice address and phone number before launch.
-const ADDRESS_LINE_1 = "123 West 72nd Street, Suite 204";
-const ADDRESS_LINE_2 = "New York, NY 10023";
-const PHONE_DISPLAY = "(555) 123-4567";
-const PHONE_HREF = "+15551234567";
+const ADDRESS_LINE_1 = "148 W 90th St.";
+const ADDRESS_LINE_2 = "New York, NY 10024";
+const PHONE_DISPLAY = "(929) 515-2147";
+const PHONE_HREF = "+19295152147";
 const EMAIL = "kaitkearneyphd@gmail.com";
 
 export default function Footer() {
