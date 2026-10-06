@@ -12,15 +12,13 @@ type BandProps = {
 export default function Band({ tone, decorative = false, children, className }: BandProps) {
   return (
     <section className={`${styles.band} ${styles[tone]} ${className ?? ""}`}>
-      <div className={styles.inner}>
-        {decorative && (
-          <>
-            <div className={styles.shapeSquare} aria-hidden="true" />
-            <div className={styles.shapeBall} aria-hidden="true" />
-          </>
-        )}
-        {children}
-      </div>
+      {decorative && (
+        <>
+          <div className={styles.shapeSquare} aria-hidden="true" />
+          <div className={styles.shapeBall} aria-hidden="true" />
+        </>
+      )}
+      <div className={styles.inner}>{children}</div>
     </section>
   );
 }

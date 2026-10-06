@@ -31,8 +31,8 @@
 
 .shapeSquare {
   position: absolute;
-  left: 24px;
-  top: 56px;
+  left: 28px;
+  top: 48px;
   width: 38px;
   height: 38px;
   background: var(--color-marigold);
@@ -44,8 +44,8 @@
 
 .shapeBall {
   position: absolute;
-  right: 40px;
-  bottom: 52px;
+  right: 28px;
+  bottom: 48px;
   width: 34px;
   height: 34px;
   background: var(--color-red);
@@ -54,7 +54,7 @@
   animation: tumIdle 6s 1.2s ease-in-out infinite;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .shapeSquare,
   .shapeBall {
     display: none;
