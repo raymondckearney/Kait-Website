@@ -11,10 +11,10 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Evaluations",
   description:
-    "Thorough, tailored neuropsychological evaluations that show how your child's brain works — and exactly what support they need at school and at home.",
+    "Comprehensive, tailored neuropsychological and diagnostic assessments — and exactly what support your child needs at school and at home.",
 };
 
-const QUESTIONS = [
+const ASSESSMENT_AREAS = [
   {
     icon: (
       <span
@@ -28,8 +28,7 @@ const QUESTIONS = [
         }}
       />
     ),
-    title: `"Is it ADHD — or something else?"`,
-    body: "Attention, focus, and executive functioning — and what's really driving the struggles.",
+    title: "Attention",
   },
   {
     icon: (
@@ -44,13 +43,11 @@ const QUESTIONS = [
         }}
       />
     ),
-    title: `"Why is school so hard?"`,
-    body: "Learning differences, processing speed, and where a bright kid keeps getting stuck.",
+    title: "Memory",
   },
   {
     icon: <Triangle width={36} height={32} color="var(--color-marigold)" strokeWidth={2} />,
-    title: `"Could this be autism?"`,
-    body: "A careful, developmental picture of social communication, flexibility, and strengths.",
+    title: "Executive functioning",
   },
   {
     icon: (
@@ -65,8 +62,7 @@ const QUESTIONS = [
         }}
       />
     ),
-    title: `"Is it anxiety, OCD, or mood?"`,
-    body: "Untangling worry, rituals, and low mood from attention and learning issues that can look alike.",
+    title: "Learning profile",
   },
   {
     icon: (
@@ -82,8 +78,7 @@ const QUESTIONS = [
         }}
       />
     ),
-    title: `"What support should school give?"`,
-    body: "Concrete, evidence-backed recommendations for accommodations, IEPs, and 504 plans.",
+    title: "Language",
   },
   {
     icon: (
@@ -98,8 +93,7 @@ const QUESTIONS = [
         }}
       />
     ),
-    title: `"What are my child's strengths?"`,
-    body: "Every report maps what's working — because the plan builds on strengths, not just struggles.",
+    title: "Mood and behavior",
   },
 ];
 
@@ -143,11 +137,10 @@ export default function EvaluationsPage() {
               strokeWidth={2.5}
               className={styles.heroShapeTriangle}
             />
-            <div className={styles.badge}>Neuropsychological evaluations</div>
-            <h1 className={styles.h1}>See how your child&apos;s brain works</h1>
+            <h1 className={styles.h1}>Neuropsychological and Diagnostic Assessments</h1>
             <p className={styles.lead}>
-              Testing is a critical piece — not just in understanding your child, but in
-              getting them the support they need. Every evaluation is thorough and
+              Assessment is a critical piece in understanding your child and getting
+              them the support they need. Every evaluation is comprehensive and
               tailored to your child, never one-size-fits-all.
             </p>
           </div>
@@ -156,20 +149,18 @@ export default function EvaluationsPage() {
         <section className={styles.questionsSection}>
           <div className={`container ${styles.sectionInner}`}>
             <Reveal as="h2" className={styles.h2}>
-              Questions an evaluation can answer
+              An evaluation can assess:
             </Reveal>
             <Reveal as="p" className={styles.sectionLead}>
-              Parents usually arrive with a question, not a diagnosis. These are the
-              ones I hear most.
+              These are the ones I hear most.
             </Reveal>
             <div className={styles.grid}>
-              {QUESTIONS.map((q) => (
-                <Reveal as="div" key={q.title} className={styles.card}>
+              {ASSESSMENT_AREAS.map((area) => (
+                <Reveal as="div" key={area.title} className={styles.card}>
                   <div className={styles.cardIcon} aria-hidden="true">
-                    {q.icon}
+                    {area.icon}
                   </div>
-                  <div className={styles.cardTitle}>{q.title}</div>
-                  <p className={styles.cardBody}>{q.body}</p>
+                  <div className={styles.cardTitle}>{area.title}</div>
                 </Reveal>
               ))}
             </div>

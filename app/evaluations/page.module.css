@@ -42,29 +42,13 @@
   animation: tumIdle 5.5s 0.5s ease-in-out infinite;
 }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 13px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-ink);
-  background: var(--color-marigold);
-  border: 2px solid var(--color-ink);
-  border-radius: var(--radius-pill);
-  padding: 8px 16px;
-  animation: tumRise 0.7s 0.05s backwards;
-}
-
 .h1 {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(44px, 6vw, 76px);
   line-height: 1.02;
   letter-spacing: -0.025em;
-  margin: 24px 0 20px;
+  margin: 0 0 20px;
   max-width: 780px;
   animation: tumRise 0.8s 0.15s backwards;
 }
@@ -125,14 +109,6 @@
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.cardBody {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--color-body-text);
-  margin: 0;
 }
 
 /* ---------- How it works (marigold band) ---------- */
