@@ -22,8 +22,8 @@ const siteUrl = "https://kaitkearneyphd.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    template: "%s — Kait Kearney, PhD · Child & Family Psychology, NYC",
-    default: "Kait Kearney, PhD · Child & Family Psychology, NYC",
+    template: "%s — Kait Kearney, PhD · Child & Family Psychologist, NYC",
+    default: "Kait Kearney, PhD · Child & Family Psychologist, NYC",
   },
   description:
     "Individual therapy, parent and family therapy, and neuropsychological evaluations for children and families in New York City — with a plan your whole family can follow.",
