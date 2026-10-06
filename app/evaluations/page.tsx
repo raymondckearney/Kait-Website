@@ -185,7 +185,7 @@ export default function EvaluationsPage() {
             <Reveal as="p" className={styles.howLead}>
               You know your child better than anyone. I help make sense of what&apos;s
               underneath the struggles. Together, we&apos;ll figure out what is getting
-              in the way for your child and map out a path forward.
+              in the way and map out a path forward.
             </Reveal>
             <ProcessSteps steps={STEPS} />
           </div>
