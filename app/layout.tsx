@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: "Kait Kearney, PhD · Child & Family Psychology, NYC",
   },
   description:
-    "Individual therapy, parent coaching, and neuropsychological evaluations for children and families in New York City — with a plan your whole family can follow.",
+    "Individual therapy, parent and family therapy, and neuropsychological evaluations for children and families in New York City — with a plan your whole family can follow.",
 };
 
 export default function RootLayout({

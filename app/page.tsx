@@ -22,11 +22,11 @@ const SERVICE_CARDS = [
   },
   {
     tone: "red",
-    eyebrow: "For you & your child, together",
-    title: "Parent Coaching",
+    eyebrow: "For your family",
+    title: "Parent and Family Therapy",
     body: "Real guidance for the hardest moments.",
     href: "#contact",
-    cta: "Ask about parent coaching →",
+    cta: "Ask about parent and family therapy →",
   },
   {
     tone: "marigold",
@@ -40,7 +40,7 @@ const SERVICE_CARDS = [
     tone: "green",
     eyebrow: "For your child's school",
     title: "School consultation",
-    body: "I work directly with teachers and schools so the plan follows your child into the classroom — where they spend most of their day.",
+    body: "I work collaboratively with teachers and schools to provide educator trainings, consultation, and classroom observations.",
     href: "#contact",
     cta: "Ask about school consultation →",
   },
@@ -101,8 +101,8 @@ export default function HomePage() {
                 </span>
               </h1>
               <p className={styles.lead}>
-                Individual therapy, neuropsychological evaluations, parent coaching —
-                with a plan your whole family can follow.
+                Individual therapy, neuropsychological evaluations, parent and family
+                therapy — with a plan your whole family can follow.
               </p>
               <div className={styles.heroCtas}>
                 <Button href="#contact" withDot>
@@ -138,7 +138,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal as="p" className={styles.sectionLead}>
               From the therapy room to the classroom — individual therapy, testing,
-              parent coaching, and school support that connect to one plan.
+              parent and family therapy, and school support that connect to one plan.
             </Reveal>
 
             <div className={styles.servicesGrid}>
