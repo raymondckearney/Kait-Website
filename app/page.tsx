@@ -227,7 +227,7 @@ export default function HomePage() {
               </Reveal>
               <Reveal as="p" className={styles.aboutBody}>
                 I&apos;m a child, adolescent, and family therapist with years of training
-                in hospitals, the Child Mind Institute, independent schools, and private
+                in hospitals, outpatient clinics, independent schools, and private
                 practice. I have specialized training in evidence-based interventions,
                 and I tailor them to fit your child and your family. I use humor,
                 honesty, and warmth to build real rapport, because kids can tell when
