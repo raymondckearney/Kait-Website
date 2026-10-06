@@ -104,14 +104,6 @@ export default function HomePage() {
                 Individual therapy, neuropsychological evaluations, parent and family
                 therapy — with a plan your whole family can follow.
               </p>
-              <div className={styles.heroCtas}>
-                <Button href="/contact" withDot>
-                  Start with a free call
-                </Button>
-                <Button href="#services" variant="secondary">
-                  See how I help
-                </Button>
-              </div>
             </div>
           </div>
           <div className="container">
