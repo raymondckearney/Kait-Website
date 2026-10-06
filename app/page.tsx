@@ -53,7 +53,7 @@ const STEPS: [
   { label: string; body: string }
 ] = [
   {
-    label: "1 · Free call",
+    label: "1 · Initial call",
     body: "Fifteen minutes. You talk, I listen, we decide if we're a fit.",
   },
   {
@@ -62,7 +62,7 @@ const STEPS: [
   },
   {
     label: "3 · The plan",
-    body: "A written plan in plain English: goals, methods, and your part at home.",
+    body: "What we're working toward, how we'll get there, and what to do at home.",
   },
   {
     label: "4 · The work",
@@ -226,10 +226,17 @@ export default function HomePage() {
                 The doctor children ask to come back and see
               </Reveal>
               <Reveal as="p" className={styles.aboutBody}>
-                I&apos;m a firm believer that therapy should feel more like building
-                something than fixing someone. Parents tell me two things: their child
-                actually looks forward to sessions, and they finally feel like they know
-                what to do at home. That&apos;s the whole job.
+                I&apos;m a child, adolescent, and family therapist with years of training
+                in hospitals, the Child Mind Institute, independent schools, and private
+                practice. I have specialized training in evidence-based interventions,
+                and I tailor them to fit your child and your family. I use humor,
+                honesty, and warmth to build real rapport, because kids can tell when
+                someone is being genuine. I&apos;m a firm believer that therapy should
+                feel more like building something than fixing someone. Parents tell me
+                two things: their child actually looks forward to sessions, and they
+                finally feel like they know what to do at home. When I&apos;m not
+                working, you&apos;ll find me hiking, reading, or spending time with my
+                family.
               </Reveal>
               <Reveal as="div" className={styles.aboutPills}>
                 <span className={styles.pill}>PhD, Clinical Psychology</span>
