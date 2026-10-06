@@ -91,7 +91,7 @@ export default function HomePage() {
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.heroText}>
               <div className={styles.badge}>
-                Child &amp; family psychology · New York City
+                Child &amp; family psychologist · New York City
               </div>
               <h1 className={styles.h1}>
                 <span className={styles.h1Line}>Big feelings.</span>
