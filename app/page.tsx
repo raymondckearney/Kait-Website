@@ -134,7 +134,7 @@ export default function HomePage() {
           <div className={`container ${styles.sectionInner}`}>
             <Reveal as="div" className={styles.sectionTitleRow}>
               <span className={styles.sectionTitleIcon} aria-hidden="true" />
-              <h2 className={styles.h2}>Four ways I help</h2>
+              <h2 className={styles.h2}>How I can help</h2>
             </Reveal>
             <Reveal as="p" className={styles.sectionLead}>
               From the therapy room to the classroom — individual therapy, testing,
