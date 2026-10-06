@@ -30,6 +30,7 @@ const ASSESSMENT_AREAS = [
       />
     ),
     title: "Attention",
+    body: "How your child focuses, shifts between tasks, and stays with things that are hard or boring.",
   },
   {
     icon: (
@@ -46,6 +47,7 @@ const ASSESSMENT_AREAS = [
       />
     ),
     title: "Memory",
+    body: "How your child takes in, holds onto, and uses information, from directions to schoolwork.",
   },
   {
     icon: (
@@ -58,6 +60,7 @@ const ASSESSMENT_AREAS = [
       />
     ),
     title: "Executive functioning",
+    body: "How your child plans, organizes, starts tasks, and manages their time, emotions, and belongings.",
   },
   {
     icon: (
@@ -74,6 +77,7 @@ const ASSESSMENT_AREAS = [
       />
     ),
     title: "Learning profile",
+    body: "Where your child learns with ease, where it takes more effort, and what helps.",
   },
   {
     icon: (
@@ -91,6 +95,7 @@ const ASSESSMENT_AREAS = [
       />
     ),
     title: "Language",
+    body: "How your child understands and expresses ideas, in conversation and in reading and writing.",
   },
   {
     icon: (
@@ -107,6 +112,7 @@ const ASSESSMENT_AREAS = [
       />
     ),
     title: "Mood and behavior",
+    body: "How your child experiences big feelings, worries, and everyday stress, and how it shows up at home and school.",
   },
 ];
 
@@ -171,6 +177,7 @@ export default function EvaluationsPage() {
                     {area.icon}
                   </div>
                   <div className={styles.cardTitle}>{area.title}</div>
+                  <p className={styles.cardBody}>{area.body}</p>
                 </Reveal>
               ))}
             </div>

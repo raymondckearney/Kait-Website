@@ -113,6 +113,14 @@
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.cardBody {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-body-text);
+  margin: 0;
 }
 
 /* ---------- How it works (marigold band) ---------- */
