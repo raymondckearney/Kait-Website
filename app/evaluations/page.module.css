@@ -156,8 +156,12 @@
 
 @media (max-width: 640px) {
   .heroShapeSquare,
-  .heroShapeBall,
-  .heroShapeTriangle {
+  .heroShapeBall {
     display: none;
+  }
+  /* Triangle is an SVG component that sets display:block inline, which
+     beats a plain class rule -- !important is needed to actually hide it. */
+  .heroShapeTriangle {
+    display: none !important;
   }
 }

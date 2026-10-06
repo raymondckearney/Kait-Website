@@ -241,8 +241,7 @@
     width: 72px;
     height: 38px;
   }
-  .smallBall {
-    width: 34px;
-    height: 34px;
+  .smallBallWrap {
+    display: none;
   }
 }
