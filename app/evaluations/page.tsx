@@ -25,6 +25,7 @@ const ASSESSMENT_AREAS = [
           border: "2px solid var(--color-ink)",
           borderRadius: 9,
           display: "inline-block",
+          animation: "tumTickle 5s 0.2s ease-in-out infinite",
         }}
       />
     ),
@@ -40,13 +41,22 @@ const ASSESSMENT_AREAS = [
           border: "2px solid var(--color-ink)",
           borderRadius: "50%",
           display: "inline-block",
+          animation: "tumTickle 5s 0.6s ease-in-out infinite",
         }}
       />
     ),
     title: "Memory",
   },
   {
-    icon: <Triangle width={36} height={32} color="var(--color-marigold)" strokeWidth={2} />,
+    icon: (
+      <Triangle
+        width={36}
+        height={32}
+        color="var(--color-marigold)"
+        strokeWidth={2}
+        style={{ animation: "tumTickle 5s 1s ease-in-out infinite" }}
+      />
+    ),
     title: "Executive functioning",
   },
   {
@@ -59,6 +69,7 @@ const ASSESSMENT_AREAS = [
           border: "2px solid var(--color-ink)",
           borderRadius: "22px 22px 0 0",
           display: "inline-block",
+          animation: "tumTickle 5s 1.4s ease-in-out infinite",
         }}
       />
     ),
@@ -75,6 +86,7 @@ const ASSESSMENT_AREAS = [
           borderRadius: 9,
           transform: "rotate(-8deg)",
           display: "inline-block",
+          animation: "tumTickle 5s 1.8s ease-in-out infinite",
         }}
       />
     ),
@@ -90,6 +102,7 @@ const ASSESSMENT_AREAS = [
           border: "2px solid var(--color-ink)",
           borderRadius: "50%",
           display: "inline-block",
+          animation: "tumTickle 5s 2.2s ease-in-out infinite",
         }}
       />
     ),
@@ -104,8 +117,8 @@ const STEPS: [
   { label: string; body: string }
 ] = [
   {
-    label: "1 · We talk first",
-    body: "An intake conversation about your questions, your child's history, and what you're seeing.",
+    label: "1 · Background",
+    body: "An intake session about your questions, your child's history, and what you're seeing.",
   },
   {
     label: "2 · Testing sessions",
@@ -113,7 +126,7 @@ const STEPS: [
   },
   {
     label: "3 · Feedback & report",
-    body: "We sit down together; you leave with a clear written report in plain English.",
+    body: "We sit down together; you leave with a clear written report and a plan.",
   },
   {
     label: "4 · Putting it to work",
@@ -149,10 +162,7 @@ export default function EvaluationsPage() {
         <section className={styles.questionsSection}>
           <div className={`container ${styles.sectionInner}`}>
             <Reveal as="h2" className={styles.h2}>
-              An evaluation can assess:
-            </Reveal>
-            <Reveal as="p" className={styles.sectionLead}>
-              These are the ones I hear most.
+              An evaluation can assess
             </Reveal>
             <div className={styles.grid}>
               {ASSESSMENT_AREAS.map((area) => (
@@ -173,8 +183,9 @@ export default function EvaluationsPage() {
               How an evaluation works
             </Reveal>
             <Reveal as="p" className={styles.howLead}>
-              Four clear steps — and you&apos;re never left waiting in the dark between
-              them.
+              You know your child better than anyone. I help make sense of what&apos;s
+              underneath the struggles. Together, we&apos;ll figure out what is getting
+              in the way for your child and map out a path forward.
             </Reveal>
             <ProcessSteps steps={STEPS} />
           </div>
@@ -195,7 +206,7 @@ export default function EvaluationsPage() {
         <CtaBand
           tone="paper"
           heading="Wondering if an evaluation would help?"
-          body="Bring your questions to the free 15-minute call — I'll tell you honestly whether testing makes sense for your child right now."
+          body="Bring your questions to the initial call — I'll tell you honestly whether testing makes sense for your child right now."
         />
       </main>
       <Footer />

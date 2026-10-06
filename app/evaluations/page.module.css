@@ -88,6 +88,10 @@
   margin: 0 0 48px;
 }
 
+.questionsSection .h2 {
+  margin-bottom: 40px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
