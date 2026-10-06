@@ -16,7 +16,7 @@ export default function CtaBand({
   heading,
   body,
   buttonLabel = "Start with a free call",
-  buttonHref = "/#contact",
+  buttonHref = "/contact",
 }: CtaBandProps) {
   return (
     <section className={`${styles.band} ${styles[tone]}`}>

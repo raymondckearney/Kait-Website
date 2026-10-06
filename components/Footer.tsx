@@ -29,7 +29,7 @@ export default function Footer() {
             <Link href="/#about" className={styles.pageLink}>
               About
             </Link>
-            <Link href="/#contact" className={styles.pageLink}>
+            <Link href="/contact" className={styles.pageLink}>
               Contact
             </Link>
           </nav>

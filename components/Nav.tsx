@@ -5,16 +5,15 @@ import Link from "next/link";
 import BlockWordmark from "./BlockWordmark";
 import styles from "./Nav.module.css";
 
-export type ActivePage = "home" | "evaluations";
+export type ActivePage = "home" | "evaluations" | "contact";
 
-// Services, About, and Contact are anchors on the Home page; Evaluations
-// is the only remaining standalone route and the only item that can
-// show as "active".
+// Services and About are anchors on the Home page; Evaluations and
+// Contact are standalone routes and can show as "active".
 const NAV_ITEMS: { key: string; label: string; href: string; page?: ActivePage }[] = [
   { key: "services", label: "Services", href: "/#services" },
   { key: "evaluations", label: "Evaluations", href: "/evaluations", page: "evaluations" },
   { key: "about", label: "About", href: "/#about" },
-  { key: "contact", label: "Contact", href: "/#contact" },
+  { key: "contact", label: "Contact", href: "/contact", page: "contact" },
 ];
 
 type NavProps = {

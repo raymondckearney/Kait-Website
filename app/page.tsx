@@ -105,7 +105,7 @@ export default function HomePage() {
                 therapy — with a plan your whole family can follow.
               </p>
               <div className={styles.heroCtas}>
-                <Button href="#contact" withDot>
+                <Button href="/contact" withDot>
                   Start with a free call
                 </Button>
                 <Button href="#services" variant="secondary">
@@ -276,7 +276,7 @@ export default function HomePage() {
                 A 15-minute call. No paperwork, no pressure, no waitlist limbo.
               </Reveal>
               <Reveal as="div" className={styles.ctaButtons}>
-                <Button href="mailto:kaitkearneyphd@gmail.com" variant="onDark">
+                <Button href="/contact" variant="onDark">
                   Start with a free call
                 </Button>
                 <Button href="tel:+19295152147" variant="ghost">

@@ -65,6 +65,11 @@
   color: #ffffff;
 }
 
+.active.contact {
+  background: var(--color-green);
+  color: #ffffff;
+}
+
 .menuToggle {
   display: flex;
   align-items: center;
@@ -112,6 +117,11 @@
 
 .mobileActive.evaluations {
   background: var(--color-cobalt);
+  color: #ffffff;
+}
+
+.mobileActive.contact {
+  background: var(--color-green);
   color: #ffffff;
 }
 
