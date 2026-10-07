@@ -193,7 +193,6 @@
     flex-wrap: wrap;
     align-items: flex-end;
     gap: 16px;
-    padding-bottom: 32px;
   }
   .shadow {
     display: none;
