@@ -479,8 +479,14 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
+  /* minmax(0, 1fr) so a long title word can't force the cards wider than
+     the screen (plain 1fr let "Neuropsychological" clip every card). */
   .servicesGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .serviceTitle {
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
   .aboutGrid,
   .ctaGrid {
@@ -500,7 +506,35 @@
   .h1 {
     font-size: clamp(40px, 12vw, 60px);
   }
+  .serviceCard {
+    padding: 40px 24px;
+  }
+  /* Keep the photo's corner block inside the screen (it caused a
+     sideways scroll on phones). */
+  .aboutShapeSquare {
+    right: -10px;
+  }
+  .serviceTitle {
+    font-size: 25px;
+  }
+  /* Same full-width pill on every card, one line, so the longest label
+     ("Ask about parent and family therapy") matches the rest. */
+  .serviceCta {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 12px;
+    font-size: clamp(13px, 3.6vw, 15px);
+    white-space: nowrap;
+  }
   .sectionInner {
     padding: 64px var(--container-pad) 56px;
+  }
+}
+
+/* Very narrow phones: let the longest label wrap rather than overflow. */
+@media (max-width: 355px) {
+  .serviceCta {
+    white-space: normal;
+    text-align: center;
   }
 }
