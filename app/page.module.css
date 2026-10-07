@@ -243,53 +243,11 @@
   color: var(--color-paper);
 }
 
-.chipsViewport {
+.chips {
   margin-top: 28px;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 32px,
-    black calc(100% - 32px),
-    transparent
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 32px,
-    black calc(100% - 32px),
-    transparent
-  );
-}
-
-.chipsTrack {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 12px;
-  width: max-content;
-  animation: chipsMarquee 32s linear infinite;
-}
-
-.chipsTrack:hover {
-  animation-play-state: paused;
-}
-
-@keyframes chipsMarquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .chipsTrack {
-    animation: none;
-  }
-  .chipsViewport {
-    overflow-x: auto;
-  }
 }
 
 .chip {

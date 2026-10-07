@@ -77,7 +77,6 @@ const CONCERNS = [
   { label: "OCD", color: "var(--color-green)", shape: "circle" },
   { label: "ARFID", color: "var(--color-cobalt)", shape: "circle" },
   { label: "Autism", color: "var(--color-red)", shape: "square" },
-  { label: "Disruptive behavior", color: "var(--color-marigold)", shape: "circle" },
   { label: "Learning difficulties", color: "var(--color-green)", shape: "square" },
 ] as const;
 
@@ -152,28 +151,20 @@ export default function HomePage() {
               ))}
             </div>
 
-            <Reveal as="div" className={styles.chipsViewport}>
-              <div className={styles.chipsTrack}>
-                {[0, 1].map((setIndex) =>
-                  CONCERNS.map((concern) => (
-                    <span
-                      key={`${setIndex}-${concern.label}`}
-                      className={styles.chip}
-                      aria-hidden={setIndex === 1 ? "true" : undefined}
-                    >
-                      <span
-                        className={styles.chipDot}
-                        style={{
-                          background: concern.color,
-                          borderRadius: concern.shape === "circle" ? "50%" : "3px",
-                        }}
-                        aria-hidden="true"
-                      />
-                      {concern.label}
-                    </span>
-                  ))
-                )}
-              </div>
+            <Reveal as="div" className={styles.chips}>
+              {CONCERNS.map((concern) => (
+                <span key={concern.label} className={styles.chip}>
+                  <span
+                    className={styles.chipDot}
+                    style={{
+                      background: concern.color,
+                      borderRadius: concern.shape === "circle" ? "50%" : "3px",
+                    }}
+                    aria-hidden="true"
+                  />
+                  {concern.label}
+                </span>
+              ))}
             </Reveal>
           </div>
         </section>
