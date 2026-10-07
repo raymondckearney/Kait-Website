@@ -250,6 +250,12 @@
   gap: 12px;
 }
 
+@media (min-width: 900px) {
+  .chips {
+    justify-content: center;
+  }
+}
+
 .chip {
   background: #ffffff;
   border: 2px solid var(--color-ink);
