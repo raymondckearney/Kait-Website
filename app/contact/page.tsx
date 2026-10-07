@@ -31,7 +31,7 @@ export default function ContactPage() {
             <h1 className={styles.h1}>Start with one small block</h1>
             <p className={styles.lead}>
               Fill out the form below and I&apos;ll be in touch within one business
-              day. Everything here is confidential.
+              day.
             </p>
           </div>
         </header>
