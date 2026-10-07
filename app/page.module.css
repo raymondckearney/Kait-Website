@@ -175,12 +175,10 @@
 }
 .serviceCard.marigold {
   background: var(--color-marigold);
-  color: var(--color-ink);
   border-right: var(--border-feature);
 }
 .serviceCard.marigold:hover {
   background: #f5bc0c;
-  color: var(--color-ink);
 }
 .serviceCard.green {
   background: var(--color-green);
@@ -219,10 +217,6 @@
   margin: 0 0 26px;
   opacity: 0.94;
 }
-.serviceCard.marigold .serviceBody {
-  color: var(--color-about-body);
-  opacity: 1;
-}
 
 .serviceCta {
   margin-top: auto;
@@ -237,10 +231,6 @@
   border-radius: var(--radius-pill);
   width: fit-content;
   border: 2px solid var(--color-ink);
-}
-.serviceCard.marigold .serviceCta {
-  background: var(--color-ink);
-  color: var(--color-paper);
 }
 
 .chips {
