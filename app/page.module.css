@@ -244,16 +244,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .chip {
   background: #ffffff;
   border: 2px solid var(--color-ink);
   border-radius: var(--radius-pill);
-  padding: 11px 22px;
+  padding: 10px 17px;
   font-weight: 700;
-  font-size: 15.5px;
+  font-size: 15px;
   display: inline-flex;
   align-items: center;
   gap: 10px;

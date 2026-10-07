@@ -136,7 +136,7 @@ const STEPS: [
   },
   {
     label: "4 · Putting it to work",
-    body: "Recommendations for home and school — with consultation to make sure they happen.",
+    body: "Recommendations for home and school which can be used for IEPs, SAT/ACT and college accommodations, and school admissions.",
   },
 ];
 
@@ -147,21 +147,48 @@ export default function EvaluationsPage() {
       <main>
         <header className={styles.hero}>
           <div className={`container ${styles.heroInner}`}>
-            <div className={styles.heroShapeSquare} aria-hidden="true" />
-            <div className={styles.heroShapeBall} aria-hidden="true" />
-            <Triangle
-              width={60}
-              height={52}
-              color="var(--color-green)"
-              strokeWidth={2.5}
-              className={styles.heroShapeTriangle}
-            />
-            <h1 className={styles.h1}>Neuropsychological and Diagnostic Assessments</h1>
-            <p className={styles.lead}>
-              Assessment is a critical piece in understanding your child and getting
-              them the support they need. Every evaluation is comprehensive and
-              tailored to your child, never one-size-fits-all.
-            </p>
+            <div>
+              <h1 className={styles.h1}>Neuropsychological and Diagnostic Assessments</h1>
+              <p className={styles.lead}>
+                Assessment is a critical piece in understanding your child and getting
+                them the support they need. Every evaluation is comprehensive and
+                tailored to your child, never one-size-fits-all.
+              </p>
+            </div>
+
+            <aside className={styles.factCard}>
+              <div className={styles.factLabel}>Who it&apos;s for</div>
+              <div className={styles.ageTrack}>
+                <span className="visuallyHidden">Ages 2½ through college</span>
+                <div className={styles.ageBlocks} aria-hidden="true">
+                  <span className={`${styles.ageBlock} ${styles.ageBlock1}`} />
+                  <span className={`${styles.ageBlock} ${styles.ageBlock2}`} />
+                  <Triangle width={44} height={40} color="var(--color-marigold)" strokeWidth={2} />
+                  <span className={`${styles.ageBlock} ${styles.ageBlock4}`} />
+                </div>
+                <div className={styles.ageEnds} aria-hidden="true">
+                  <span>Age 2½</span>
+                  <span>College</span>
+                </div>
+              </div>
+
+              <div className={styles.factLabel}>Often used for</div>
+              <ul className={styles.useList}>
+                <li className={styles.usePill}>
+                  <span className={styles.useDot} style={{ background: "var(--color-cobalt)" }} />
+                  IEP &amp; 504 plans
+                </li>
+                <li className={styles.usePill}>
+                  <span className={styles.useDot} style={{ background: "var(--color-red)" }} />
+                  SAT/ACT &amp; college accommodations
+                </li>
+                <li className={styles.usePill}>
+                  <span className={styles.useDot} style={{ background: "var(--color-green)" }} />
+                  School admissions
+                </li>
+                <li className={`${styles.usePill} ${styles.usePillMore}`}>and more</li>
+              </ul>
+            </aside>
           </div>
         </header>
 

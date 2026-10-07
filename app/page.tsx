@@ -16,7 +16,7 @@ const SERVICE_CARDS = [
     tone: "cobalt",
     eyebrow: "For your child",
     title: "Individual therapy",
-    body: "Children and teens working through big feelings in warm, structured sessions that build real skills without feeling like an appointment.",
+    body: "Kids and teens working through what's hard in warm, structured sessions that build real skills without feeling like an appointment.",
     href: "#contact",
     cta: "Ask about individual therapy →",
   },
@@ -78,6 +78,7 @@ const CONCERNS = [
   { label: "ARFID", color: "var(--color-cobalt)", shape: "circle" },
   { label: "Autism", color: "var(--color-red)", shape: "square" },
   { label: "Learning difficulties", color: "var(--color-green)", shape: "square" },
+  { label: "Changes & transitions", color: "var(--color-marigold)", shape: "circle" },
 ] as const;
 
 export default function HomePage() {
@@ -206,7 +207,7 @@ export default function HomePage() {
                 Meet your psychologist
               </Reveal>
               <Reveal as="h2" className={styles.aboutH2}>
-                The doctor children ask to come back and see
+                Hi, I&apos;m Dr. Kait
               </Reveal>
               <Reveal as="p" className={styles.aboutBody}>
                 I&apos;m a child, adolescent, and family therapist with years of training
@@ -215,11 +216,9 @@ export default function HomePage() {
                 and I tailor them to fit your child and your family. I use humor,
                 honesty, and warmth to build real rapport, because kids can tell when
                 someone is being genuine. I&apos;m a firm believer that therapy should
-                feel more like building something than fixing someone. Parents tell me
-                two things: their child actually looks forward to sessions, and they
-                finally feel like they know what to do at home. When I&apos;m not
-                working, you&apos;ll find me hiking, reading, or spending time with my
-                family.
+                feel more like building something than fixing someone. When I&apos;m
+                not working, you&apos;ll find me hiking, reading, or spending time with
+                my family.
               </Reveal>
               <Reveal as="div" className={styles.aboutPills}>
                 <span className={styles.pill}>PhD, Clinical Psychology</span>

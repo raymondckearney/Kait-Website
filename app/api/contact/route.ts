@@ -4,10 +4,11 @@ import { Resend } from "resend";
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
 export const SERVICE_OPTIONS = [
-  "Child therapy",
+  "Individual therapy",
   "Family therapy",
   "Parent consultation/support",
   "Testing/assessment",
+  "School consultation",
 ] as const;
 
 type ContactPayload = {

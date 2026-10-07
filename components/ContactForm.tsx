@@ -6,10 +6,11 @@ import styles from "./ContactForm.module.css";
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
 const SERVICE_OPTIONS = [
-  "Child therapy",
+  "Individual therapy",
   "Family therapy",
   "Parent consultation/support",
   "Testing/assessment",
+  "School consultation",
 ] as const;
 
 type Status = "idle" | "submitting";
@@ -108,7 +109,6 @@ export default function ContactForm() {
   return (
     <div className={styles.formCard}>
       <div className={styles.formTitle}>Request your free call</div>
-      <p className={styles.formSubtitle}>Everything here is confidential.</p>
       <form className={styles.fields} onSubmit={handleSubmit} noValidate>
         <div className={styles.fieldRow}>
           <label className={styles.label} htmlFor={`${formId}-firstName`}>

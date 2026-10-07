@@ -11,13 +11,7 @@
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 24px;
-  margin-bottom: 6px;
-}
-
-.formSubtitle {
-  font-size: 15px;
-  color: var(--color-muted-text);
-  margin: 0 0 28px;
+  margin-bottom: 24px;
 }
 
 .fields {

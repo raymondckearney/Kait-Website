@@ -6,40 +6,122 @@
 }
 
 .heroInner {
-  padding: 88px var(--container-pad) 84px;
-  position: relative;
+  padding: 76px var(--container-pad) 80px;
 }
 
-.heroShapeSquare {
-  position: absolute;
-  right: 60px;
-  top: 74px;
-  width: 74px;
-  height: 74px;
-  background: var(--color-marigold);
+@media (min-width: 1000px) {
+  .heroInner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    gap: 56px;
+    align-items: center;
+  }
+}
+
+/* ---------- Who / why card ---------- */
+.factCard {
+  background: var(--color-paper);
+  color: var(--color-ink);
   border: var(--border-feature);
-  border-radius: 16px;
-  transform: rotate(10deg);
-  animation: tumIdle 5s ease-in-out infinite;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hard);
+  padding: 26px 28px 28px;
+  animation: tumRise 0.9s 0.4s backwards;
 }
 
-.heroShapeBall {
-  position: absolute;
-  right: 190px;
-  bottom: 64px;
-  width: 52px;
-  height: 52px;
+@media (max-width: 999px) {
+  .factCard {
+    margin-top: 40px;
+    max-width: 480px;
+  }
+}
+
+.factLabel {
+  font-weight: 800;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted-text);
+  margin-bottom: 14px;
+}
+
+.ageTrack {
+  margin-bottom: 26px;
+}
+
+/* Blocks grow left to right: a little "growing up" chart. */
+.ageBlocks {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 6px;
+  border-bottom: 2.5px solid var(--color-ink);
+}
+
+.ageBlock {
+  display: block;
+  border: 2px solid var(--color-ink);
+  box-shadow: inset -3px -4px 0 rgba(0, 0, 0, 0.13);
+}
+.ageBlock1 {
+  width: 20px;
+  height: 20px;
+  background: var(--color-cobalt);
+  border-radius: 5px;
+}
+.ageBlock2 {
+  width: 30px;
+  height: 30px;
   background: var(--color-red);
-  border: var(--border-feature);
   border-radius: 50%;
-  animation: tumIdle 6s 1s ease-in-out infinite;
+}
+.ageBlock4 {
+  width: 54px;
+  height: 54px;
+  background: var(--color-green);
+  border-radius: 10px;
 }
 
-.heroShapeTriangle {
-  position: absolute;
-  right: 310px;
-  top: 116px;
-  animation: tumIdle 5.5s 0.5s ease-in-out infinite;
+.ageEnds {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.useList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.usePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  padding: 7px 14px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.useDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.usePillMore {
+  border-style: dashed;
+  color: var(--color-muted-text);
 }
 
 .h1 {
@@ -159,17 +241,5 @@
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .heroShapeSquare,
-  .heroShapeBall {
-    display: none;
-  }
-  /* Triangle is an SVG component that sets display:block inline, which
-     beats a plain class rule -- !important is needed to actually hide it. */
-  .heroShapeTriangle {
-    display: none !important;
   }
 }
