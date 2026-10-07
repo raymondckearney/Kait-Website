@@ -11,13 +11,18 @@ type ProcessStepsProps = {
 };
 
 const HEIGHT_KEYS = ["step1", "step2", "step3", "step4"] as const;
+const DROP_KEYS = ["drop3", "drop2", "drop1", "drop0"] as const;
 
 /** Four blocks stacking up step by step — shared by Home ("how it works") and Evaluations. */
 export default function ProcessSteps({ steps }: ProcessStepsProps) {
   return (
     <div className={styles.grid}>
       {steps.map((step, i) => (
-        <Reveal as="div" key={step.label} className={styles.card}>
+        <Reveal
+          as="div"
+          key={step.label}
+          className={`${styles.card} ${styles[DROP_KEYS[i]]}`}
+        >
           <div className={styles.top}>
             <div className={styles.label}>{step.label}</div>
             <div className={styles.body}>{step.body}</div>

@@ -1,13 +1,36 @@
+/* All four white tops share one grid row (via subgrid) so they're always
+   equal height regardless of copy length. Each card is then dropped by
+   an even 44px step; with bases growing 44px per step, every card's
+   bottom lands on the same line and the staircase stays uniform. */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  align-items: end;
+  grid-template-rows: auto auto;
+  gap: 0 20px;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: subgrid;
+}
+
+.top,
+.base {
+  position: relative;
+}
+
+.drop0 > * {
+  top: 0;
+}
+.drop1 > * {
+  top: 44px;
+}
+.drop2 > * {
+  top: 88px;
+}
+.drop3 > * {
+  top: 132px;
 }
 
 .top {
@@ -31,6 +54,7 @@
 }
 
 .base {
+  align-self: start;
   border: var(--border-feature);
   border-top: none;
   border-radius: 0 0 6px 6px;
@@ -56,6 +80,19 @@
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 20px;
+  }
+  .card {
+    grid-row: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .card > * {
+    top: 0;
+  }
+  .base {
+    align-self: stretch;
   }
   .base.step1,
   .base.step2,
