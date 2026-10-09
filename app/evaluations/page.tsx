@@ -25,7 +25,6 @@ const ASSESSMENT_AREAS = [
           border: "2px solid var(--color-ink)",
           borderRadius: 9,
           display: "inline-block",
-          animation: "tumTickle 5s 0.2s ease-in-out infinite",
         }}
       />
     ),
@@ -42,7 +41,6 @@ const ASSESSMENT_AREAS = [
           border: "2px solid var(--color-ink)",
           borderRadius: "50%",
           display: "inline-block",
-          animation: "tumTickle 5s 0.6s ease-in-out infinite",
         }}
       />
     ),
@@ -51,13 +49,7 @@ const ASSESSMENT_AREAS = [
   },
   {
     icon: (
-      <Triangle
-        width={36}
-        height={32}
-        color="var(--color-yellow)"
-        strokeWidth={2}
-        style={{ animation: "tumTickle 5s 1s ease-in-out infinite" }}
-      />
+      <Triangle width={36} height={32} color="var(--color-yellow)" strokeWidth={2} />
     ),
     title: "Executive functioning",
     body: "How your child plans, organizes, starts tasks, and manages their time, emotions, and belongings.",
@@ -72,7 +64,6 @@ const ASSESSMENT_AREAS = [
           border: "2px solid var(--color-ink)",
           borderRadius: "22px 22px 0 0",
           display: "inline-block",
-          animation: "tumTickle 5s 1.4s ease-in-out infinite",
         }}
       />
     ),
@@ -90,7 +81,6 @@ const ASSESSMENT_AREAS = [
           borderRadius: 9,
           transform: "rotate(-8deg)",
           display: "inline-block",
-          animation: "tumTickle 5s 1.8s ease-in-out infinite",
         }}
       />
     ),
@@ -107,7 +97,6 @@ const ASSESSMENT_AREAS = [
           border: "2px solid var(--color-ink)",
           borderRadius: "50%",
           display: "inline-block",
-          animation: "tumTickle 5s 2.2s ease-in-out infinite",
         }}
       />
     ),

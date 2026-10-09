@@ -287,95 +287,44 @@ function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] })
   switch (tone) {
     case "cobalt":
       return (
-        <>
-          <span
-            style={{
-              width: 48,
-              height: 48,
-              background: "var(--color-yellow)",
-              border: "2px solid var(--color-ink)",
-              borderRadius: 12,
-              display: "inline-block",
-              animation: "tumTickle 5s 1s ease-in-out infinite",
-            }}
-          />
-          <span
-            style={{
-              width: 26,
-              height: 26,
-              background: "var(--color-pink)",
-              border: "2px solid var(--color-ink)",
-              borderRadius: "50%",
-              display: "inline-block",
-            }}
-          />
-        </>
+        <span
+          style={{
+            width: 48,
+            height: 48,
+            background: "var(--color-yellow)",
+            border: "2px solid var(--color-ink)",
+            borderRadius: 12,
+            display: "inline-block",
+          }}
+        />
       );
     case "red":
       return (
-        <>
-          <span
-            style={{
-              width: 48,
-              height: 27,
-              background: "var(--color-teal)",
-              border: "2px solid var(--color-ink)",
-              borderRadius: "27px 27px 0 0",
-              display: "inline-block",
-              animation: "tumTickle 5s 2s ease-in-out infinite",
-            }}
-          />
-          <Triangle width={30} height={27} color="var(--color-yellow)" strokeWidth={2} />
-        </>
+        <span
+          style={{
+            width: 56,
+            height: 30,
+            background: "var(--color-teal)",
+            border: "2px solid var(--color-ink)",
+            borderRadius: "30px 30px 0 0",
+            display: "inline-block",
+          }}
+        />
       );
     case "marigold":
       return (
-        <>
-          <span
-            style={{
-              width: 48,
-              height: 48,
-              background: "var(--color-indigo)",
-              border: "2px solid var(--color-ink)",
-              borderRadius: "50%",
-              display: "inline-block",
-              animation: "tumTickle 5s 1.5s ease-in-out infinite",
-            }}
-          />
-          <span
-            style={{
-              width: 26,
-              height: 26,
-              background: "var(--color-paper)",
-              border: "2px solid var(--color-ink)",
-              borderRadius: 6,
-              display: "inline-block",
-              transform: "rotate(8deg)",
-            }}
-          />
-        </>
+        <span
+          style={{
+            width: 48,
+            height: 48,
+            background: "var(--color-indigo)",
+            border: "2px solid var(--color-ink)",
+            borderRadius: "50%",
+            display: "inline-block",
+          }}
+        />
       );
     case "green":
-      return (
-        <>
-          <Triangle
-            width={48}
-            height={42}
-            color="var(--color-yellow)"
-            strokeWidth={2}
-            style={{ animation: "tumTickle 5s 0.5s ease-in-out infinite" }}
-          />
-          <span
-            style={{
-              width: 26,
-              height: 26,
-              background: "var(--color-pink)",
-              border: "2px solid var(--color-ink)",
-              borderRadius: "50%",
-              display: "inline-block",
-            }}
-          />
-        </>
-      );
+      return <Triangle width={48} height={42} color="var(--color-yellow)" strokeWidth={2} />;
   }
 }
