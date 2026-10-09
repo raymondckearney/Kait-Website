@@ -170,55 +170,6 @@ textarea:focus-visible,
    Motion — "Tumbled Toys" §8
    ========================================================================== */
 
-@keyframes tumDrop {
-  0% {
-    transform: translateY(-620px) rotate(-24deg);
-    animation-timing-function: cubic-bezier(0.45, 0, 1, 1);
-  }
-  55% {
-    transform: translateY(0) rotate(0deg);
-    animation-timing-function: cubic-bezier(0, 0, 0.38, 1);
-  }
-  72% {
-    transform: translateY(-44px) rotate(4deg);
-    animation-timing-function: cubic-bezier(0.6, 0, 1, 1);
-  }
-  85% {
-    transform: translateY(0) rotate(0deg);
-    animation-timing-function: cubic-bezier(0, 0, 0.38, 1);
-  }
-  93% {
-    transform: translateY(-12px) rotate(-1deg);
-    animation-timing-function: cubic-bezier(0.6, 0, 1, 1);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-}
-
-@keyframes tumSquash {
-  0%,
-  54% {
-    transform: scale(1, 1);
-  }
-  58% {
-    transform: scale(1.14, 0.8);
-  }
-  66% {
-    transform: scale(0.96, 1.04);
-  }
-  72% {
-    transform: scale(1, 1);
-  }
-  84% {
-    transform: scale(1.06, 0.92);
-  }
-  90%,
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
 @keyframes tumIdle {
   0%,
   100% {
@@ -252,17 +203,6 @@ textarea:focus-visible,
   }
 }
 
-@keyframes tumRoll {
-  0% {
-    transform: translateX(-40px) rotate(-180deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-
 @keyframes tumSway {
   0%,
   100% {
@@ -286,35 +226,6 @@ textarea:focus-visible,
   }
   80% {
     transform: translateY(-3px) rotate(0deg);
-  }
-}
-
-/*
- * Mobile-only hero entrance: blocks fly out from the wordmark's mini
- * shapes in the nav bar and grow into place. The start position/scale
- * come from CSS custom properties set at runtime (HeroBlocks measures
- * the actual nav logo position), with safe fallbacks here in case JS
- * hasn't set them yet.
- */
-@keyframes tumFlyFromLogo {
-  0% {
-    transform: translate(var(--fly-x, 0px), var(--fly-y, -36px))
-      scale(var(--fly-scale, 0.2));
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  62% {
-    transform: translate(0, 0) scale(1.08);
-    opacity: 1;
-  }
-  80% {
-    transform: translate(0, -6px) scale(0.97);
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
   }
 }
 

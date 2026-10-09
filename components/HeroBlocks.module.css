@@ -13,67 +13,50 @@
   }
 }
 
-.shadow {
+/* ---------- Blocks: tilted square, ball resting on an arch ---------- */
+.shapes {
   position: absolute;
-  bottom: -2px;
-  height: 14px;
-  background: rgba(26, 26, 26, 0.16);
-  border-radius: 50%;
-  filter: blur(5px);
-}
-
-.blockWrap {
-  position: absolute;
+  right: 0;
   bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
 }
 
-.squash {
-  transform-origin: bottom center;
-}
-
-/* Cream rather than indigo: the hero background is indigo. */
 .square {
-  width: 96px;
-  height: 96px;
-  background: var(--color-paper);
+  width: 160px;
+  height: 160px;
+  background: var(--color-yellow);
   border: var(--border-feature);
-  border-radius: 13px;
-  box-shadow: inset -6px -8px 0 rgba(0, 0, 0, 0.14);
-  transform: rotate(-4deg);
+  border-radius: 20px;
+  box-shadow: inset -10px -11px 0 rgba(0, 0, 0, 0.13);
+  transform: rotate(-5deg);
+  /* Lift so the lowest tilted corner rests on the floor line. */
+  margin-bottom: 7px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ball {
-  width: 66px;
-  height: 66px;
+  width: 100px;
+  height: 100px;
   background: var(--color-pink);
   border: var(--border-feature);
   border-radius: 50%;
-  box-shadow: inset -6px -7px 0 rgba(0, 0, 0, 0.12);
-}
-
-.triangle {
-  display: block;
-  width: 88px;
-  height: 78px;
-  overflow: visible;
+  box-shadow: inset -8px -9px 0 rgba(0, 0, 0, 0.12);
 }
 
 .arch {
-  width: 96px;
-  height: 50px;
+  width: 180px;
+  height: 90px;
   background: var(--color-teal);
   border: var(--border-feature);
-  border-radius: 50px 50px 0 0;
-  box-shadow: inset -6px -6px 0 rgba(0, 0, 0, 0.12);
-}
-
-.smallBall {
-  width: 36px;
-  height: 36px;
-  background: var(--color-yellow);
-  border: var(--border-feature);
-  border-radius: 50%;
-  box-shadow: inset -3px -4px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 90px 90px 0 0;
+  box-shadow: inset -9px -8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .stats {
@@ -107,98 +90,40 @@
   margin-top: 4px;
 }
 
-/* --- Animations (front-loaded on load) --- */
-.animDrop {
-  animation: tumDrop 1.8s backwards;
-}
-.animSquash {
-  animation: tumSquash 1.8s backwards;
-}
-.animRoll {
-  animation: tumRoll 1s 2.4s backwards;
-}
-.animRise {
-  animation: tumRise 0.8s backwards;
-}
-
-/* Desktop absolute layout — scaled down ~0.8x from the original mockup
-   pixel positions so the whole composition lands within the viewport
-   without scrolling on most screen sizes. */
-@media (min-width: 900px) {
-  .shadowSquare {
-    right: 32px;
-    width: 104px;
-  }
-  .shadowTriangle {
-    right: 190px;
-    width: 84px;
-  }
-  .shadowArch {
-    right: 332px;
-    width: 96px;
-  }
-  .shadowSmallBall {
-    left: 330px;
-    width: 76px;
-  }
-
-  .squareWrap {
-    right: 38px;
-  }
-  .ballWrap {
-    bottom: 96px;
-    right: 54px;
-  }
-  .triangleWrap {
-    right: 200px;
-  }
-  .archWrap {
-    right: 336px;
-  }
-  .smallBallWrap {
-    left: 344px;
-  }
-}
-
-/* Mobile / tablet: simplify to a flex row below headline, no absolute placement */
+/* Mobile / tablet: blocks sit in a row below the headline, then the card. */
 @media (max-width: 899px) {
   .floor {
     height: auto;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
   }
-  .shadow {
-    display: none;
-  }
-  .blockWrap {
+  .shapes {
     position: static;
+    gap: 10px;
   }
   .stats {
     position: static;
     left: auto;
     width: 100%;
-    order: 10;
   }
   .square {
-    width: 72px;
-    height: 72px;
-    border-radius: 12px;
+    width: 92px;
+    height: 92px;
+    border-radius: 14px;
+    box-shadow: inset -6px -7px 0 rgba(0, 0, 0, 0.13);
+    margin-bottom: 4px;
   }
   .ball {
-    width: 56px;
-    height: 56px;
-  }
-  .triangle {
-    width: 68px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
+    box-shadow: inset -5px -6px 0 rgba(0, 0, 0, 0.12);
   }
   .arch {
-    width: 72px;
-    height: 38px;
-  }
-  .smallBallWrap {
-    display: none;
+    width: 104px;
+    height: 52px;
+    border-radius: 52px 52px 0 0;
+    box-shadow: inset -6px -5px 0 rgba(0, 0, 0, 0.12);
   }
 }
