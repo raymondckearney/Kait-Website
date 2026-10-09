@@ -42,7 +42,7 @@
 
 .label {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 15px;
   margin-bottom: 8px;
 }
@@ -62,19 +62,19 @@
 
 .base.step1 {
   height: 44px;
-  background: var(--color-cobalt);
+  background: var(--color-indigo);
 }
 .base.step2 {
   height: 88px;
-  background: var(--color-red);
+  background: var(--color-pink);
 }
 .base.step3 {
   height: 132px;
-  background: var(--color-green);
+  background: var(--color-teal);
 }
 .base.step4 {
   height: 176px;
-  background: var(--color-marigold);
+  background: var(--color-yellow);
 }
 
 @media (max-width: 900px) {

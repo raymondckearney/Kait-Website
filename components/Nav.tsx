@@ -32,7 +32,7 @@ function NavShape({ shape }: { shape: ShapeKind }) {
   return (
     <span className={styles.shapeSlot} aria-hidden="true">
       {shape === "triangle" ? (
-        <Triangle width={28} height={25} color="var(--color-marigold)" strokeWidth={2} />
+        <Triangle width={28} height={25} color="var(--color-yellow)" strokeWidth={2} />
       ) : (
         <span className={`${styles.shape} ${styles[shape]}`} />
       )}

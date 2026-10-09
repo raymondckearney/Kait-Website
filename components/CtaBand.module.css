@@ -3,7 +3,7 @@
 }
 
 .cobalt {
-  background: var(--color-cobalt);
+  background: var(--color-indigo);
   color: #ffffff;
 }
 .paper {
@@ -20,7 +20,7 @@
 
 .heading {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(32px, 4vw, 50px);
   letter-spacing: -0.02em;
   margin: 0 0 18px;

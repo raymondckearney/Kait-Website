@@ -87,7 +87,7 @@ export default function HeroBlocks() {
         style={{ animation: "tumSquash 1.8s 1.5s backwards" }}
       />
 
-      {/* cobalt square */}
+      {/* cream square */}
       <div
         ref={squareOuterRef}
         className={`${styles.blockWrap} ${styles.squareWrap}`}
@@ -102,7 +102,7 @@ export default function HeroBlocks() {
         </div>
       </div>
 
-      {/* coral ball on the square, with the one permitted face */}
+      {/* pink ball on the square */}
       <div
         ref={ballOuterRef}
         className={`${styles.blockWrap} ${styles.ballWrap}`}
@@ -113,15 +113,11 @@ export default function HeroBlocks() {
           className={styles.squash}
           style={{ animation: "tumSquash 1.8s 1.7s backwards" }}
         >
-          <div className={styles.ball}>
-            <span className={`${styles.eye} ${styles.eyeLeft} ${styles.animBlink}`} />
-            <span className={`${styles.eye} ${styles.eyeRight} ${styles.animBlink}`} />
-            <span className={styles.mouth} />
-          </div>
+          <div className={styles.ball} />
         </div>
       </div>
 
-      {/* marigold triangle */}
+      {/* yellow triangle */}
       <div
         ref={triangleOuterRef}
         className={`${styles.blockWrap} ${styles.triangleWrap}`}
@@ -140,7 +136,7 @@ export default function HeroBlocks() {
             </defs>
             <polygon
               points="44,1.5 2.5,76.5 85.5,76.5"
-              fill="var(--color-marigold)"
+              fill="var(--color-yellow)"
               stroke="var(--color-ink)"
               strokeWidth="2.5"
               vectorEffect="non-scaling-stroke"
@@ -171,7 +167,7 @@ export default function HeroBlocks() {
         </div>
       </div>
 
-      {/* small cobalt ball rolls in */}
+      {/* small ball rolls in */}
       <div
         ref={smallBallOuterRef}
         className={`${styles.blockWrap} ${styles.smallBallWrap}`}

@@ -5,15 +5,15 @@
 }
 
 .cobalt {
-  background: var(--color-cobalt);
+  background: var(--color-indigo);
   color: #ffffff;
 }
 .green {
-  background: var(--color-green);
-  color: #ffffff;
+  background: var(--color-teal);
+  color: var(--color-ink);
 }
 .marigold {
-  background: var(--color-marigold);
+  background: var(--color-yellow);
   color: var(--color-ink);
 }
 .paper {
@@ -35,7 +35,7 @@
   top: 48px;
   width: 38px;
   height: 38px;
-  background: var(--color-marigold);
+  background: var(--color-yellow);
   border: 2px solid var(--color-ink);
   border-radius: 9px;
   transform: rotate(-12deg);
@@ -48,7 +48,7 @@
   bottom: 48px;
   width: 34px;
   height: 34px;
-  background: var(--color-red);
+  background: var(--color-pink);
   border: 2px solid var(--color-ink);
   border-radius: 50%;
   animation: tumIdle 6s 1.2s ease-in-out infinite;

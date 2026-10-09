@@ -71,14 +71,14 @@ const STEPS: [
 ];
 
 const CONCERNS = [
-  { label: "ADHD", color: "var(--color-cobalt)", shape: "square" },
-  { label: "Anxiety", color: "var(--color-red)", shape: "circle" },
-  { label: "Depression", color: "var(--color-marigold)", shape: "square" },
-  { label: "OCD", color: "var(--color-green)", shape: "circle" },
-  { label: "ARFID", color: "var(--color-cobalt)", shape: "circle" },
-  { label: "Autism", color: "var(--color-red)", shape: "square" },
-  { label: "Learning difficulties", color: "var(--color-green)", shape: "square" },
-  { label: "Changes & transitions", color: "var(--color-marigold)", shape: "circle" },
+  { label: "ADHD", color: "var(--color-indigo)", shape: "square" },
+  { label: "Anxiety", color: "var(--color-pink)", shape: "circle" },
+  { label: "Depression", color: "var(--color-yellow)", shape: "square" },
+  { label: "OCD", color: "var(--color-teal)", shape: "circle" },
+  { label: "ARFID", color: "var(--color-indigo)", shape: "circle" },
+  { label: "Autism", color: "var(--color-pink)", shape: "square" },
+  { label: "Learning difficulties", color: "var(--color-teal)", shape: "square" },
+  { label: "Changes & transitions", color: "var(--color-yellow)", shape: "circle" },
 ] as const;
 
 export default function HomePage() {
@@ -96,8 +96,11 @@ export default function HomePage() {
               <h1 className={styles.h1}>
                 <span className={styles.h1Line}>Big feelings.</span>
                 <span className={styles.h1Line}>
-                  Bigger <span className={styles.h1Accent}>support</span>
-                  <span className={styles.h1Dot} aria-hidden="true" />
+                  Bigger{" "}
+                  <span className={styles.nowrap}>
+                    <span className={styles.h1Accent}>support</span>
+                    <span className={styles.h1Dot} aria-hidden="true" />
+                  </span>
                 </span>
               </h1>
               <p className={styles.lead}>
@@ -113,11 +116,11 @@ export default function HomePage() {
 
         <ColorStrip
           segments={[
-            { color: "var(--color-cobalt)", flex: 2 },
-            { color: "var(--color-red)", flex: 1 },
-            { color: "var(--color-marigold)", flex: 3 },
-            { color: "var(--color-green)", flex: 1.5 },
-            { color: "var(--color-red)", flex: 1 },
+            { color: "var(--color-indigo)", flex: 2 },
+            { color: "var(--color-pink)", flex: 1 },
+            { color: "var(--color-yellow)", flex: 3 },
+            { color: "var(--color-teal)", flex: 1.5 },
+            { color: "var(--color-pink)", flex: 1 },
           ]}
         />
 
@@ -196,7 +199,7 @@ export default function HomePage() {
               <Triangle
                 width={48}
                 height={42}
-                color="var(--color-green)"
+                color="var(--color-teal)"
                 strokeWidth={2.5}
                 className={styles.aboutShapeTriangle}
               />
@@ -235,7 +238,7 @@ export default function HomePage() {
             as="div"
             style={{
               fontFamily: "var(--font-display)",
-              fontWeight: 800,
+              fontWeight: 700,
               fontSize: "clamp(26px, 3.4vw, 40px)",
               lineHeight: 1.25,
               letterSpacing: "-0.015em",
@@ -289,7 +292,7 @@ function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] })
             style={{
               width: 48,
               height: 48,
-              background: "var(--color-marigold)",
+              background: "var(--color-yellow)",
               border: "2px solid var(--color-ink)",
               borderRadius: 12,
               display: "inline-block",
@@ -300,7 +303,7 @@ function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] })
             style={{
               width: 26,
               height: 26,
-              background: "var(--color-red)",
+              background: "var(--color-pink)",
               border: "2px solid var(--color-ink)",
               borderRadius: "50%",
               display: "inline-block",
@@ -315,14 +318,14 @@ function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] })
             style={{
               width: 48,
               height: 27,
-              background: "var(--color-green)",
+              background: "var(--color-teal)",
               border: "2px solid var(--color-ink)",
               borderRadius: "27px 27px 0 0",
               display: "inline-block",
               animation: "tumTickle 5s 2s ease-in-out infinite",
             }}
           />
-          <Triangle width={30} height={27} color="var(--color-marigold)" strokeWidth={2} />
+          <Triangle width={30} height={27} color="var(--color-yellow)" strokeWidth={2} />
         </>
       );
     case "marigold":
@@ -332,7 +335,7 @@ function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] })
             style={{
               width: 48,
               height: 48,
-              background: "var(--color-cobalt)",
+              background: "var(--color-indigo)",
               border: "2px solid var(--color-ink)",
               borderRadius: "50%",
               display: "inline-block",
@@ -358,7 +361,7 @@ function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] })
           <Triangle
             width={48}
             height={42}
-            color="var(--color-marigold)"
+            color="var(--color-yellow)"
             strokeWidth={2}
             style={{ animation: "tumTickle 5s 0.5s ease-in-out infinite" }}
           />
@@ -366,7 +369,7 @@ function ServiceIcon({ tone }: { tone: (typeof SERVICE_CARDS)[number]["tone"] })
             style={{
               width: 26,
               height: 26,
-              background: "var(--color-red)",
+              background: "var(--color-pink)",
               border: "2px solid var(--color-ink)",
               borderRadius: "50%",
               display: "inline-block",

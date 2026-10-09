@@ -23,7 +23,7 @@ export default function ContactPage() {
             <Triangle
               width={56}
               height={48}
-              color="var(--color-marigold)"
+              color="var(--color-yellow)"
               strokeWidth={2.5}
               className={styles.heroShapeTriangle}
             />

@@ -1,5 +1,5 @@
 .hero {
-  background: var(--color-cobalt);
+  background: var(--color-indigo);
   color: #ffffff;
   border-bottom: 2px solid var(--color-ink);
   overflow: hidden;
@@ -66,19 +66,19 @@
 .ageBlock1 {
   width: 20px;
   height: 20px;
-  background: var(--color-cobalt);
+  background: var(--color-indigo);
   border-radius: 5px;
 }
 .ageBlock2 {
   width: 30px;
   height: 30px;
-  background: var(--color-red);
+  background: var(--color-pink);
   border-radius: 50%;
 }
 .ageBlock4 {
   width: 54px;
   height: 54px;
-  background: var(--color-green);
+  background: var(--color-teal);
   border-radius: 10px;
 }
 
@@ -87,7 +87,7 @@
   justify-content: space-between;
   margin-top: 8px;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 16px;
 }
 
@@ -126,7 +126,7 @@
 
 .h1 {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(32px, 4.4vw, 54px);
   line-height: 1.08;
   letter-spacing: -0.02em;
@@ -156,7 +156,7 @@
 
 .h2 {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(32px, 4vw, 48px);
   letter-spacing: -0.02em;
   margin: 0 0 12px;
@@ -193,7 +193,7 @@
 
 .cardTitle {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 18px;
   margin-bottom: 8px;
 }
@@ -207,7 +207,7 @@
 
 /* ---------- How it works (marigold band) ---------- */
 .howSection {
-  background: var(--color-marigold);
+  background: var(--color-yellow);
   border-bottom: 2px solid var(--color-ink);
 }
 
@@ -223,7 +223,7 @@
 /* ---------- Experience band ---------- */
 .experienceHeading {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(26px, 3.2vw, 38px);
   letter-spacing: -0.015em;
   line-height: 1.25;

@@ -49,7 +49,7 @@
   opacity: 0.85;
 }
 .pageLink:hover {
-  color: var(--color-marigold);
+  color: var(--color-yellow);
 }
 
 .visitLine {
@@ -58,10 +58,10 @@
 }
 
 .contactLink {
-  color: var(--color-marigold);
+  color: var(--color-yellow);
 }
 .contactLink:hover {
-  color: var(--color-red);
+  color: var(--color-pink);
 }
 
 .bottom {

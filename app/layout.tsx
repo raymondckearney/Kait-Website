@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Shantell_Sans, Atkinson_Hyperlegible } from "next/font/google";
+import { Fraunces, Atkinson_Hyperlegible } from "next/font/google";
 import AnchorScrollHandler from "@/components/AnchorScrollHandler";
 import "./globals.css";
 
-const shantellSans = Shantell_Sans({
-  variable: "--font-shantell-sans",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["700"],
   display: "swap",
 });
 
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${shantellSans.variable} ${atkinsonHyperlegible.variable}`}
+      className={`${fraunces.variable} ${atkinsonHyperlegible.variable}`}
     >
       <body>
         {children}

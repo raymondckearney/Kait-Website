@@ -1,5 +1,5 @@
 .hero {
-  background: var(--color-red);
+  background: var(--color-indigo);
   color: #ffffff;
   border-bottom: 2px solid var(--color-ink);
   overflow: hidden;
@@ -16,7 +16,7 @@
   bottom: 0;
   width: 74px;
   height: 74px;
-  background: var(--color-green);
+  background: var(--color-teal);
   border: var(--border-feature);
   border-radius: 16px;
   transform: rotate(10deg);
@@ -29,7 +29,7 @@
   bottom: 0;
   width: 52px;
   height: 52px;
-  background: var(--color-cobalt);
+  background: var(--color-pink);
   border: var(--border-feature);
   border-radius: 50%;
   animation: tumIdle 6s 1s ease-in-out infinite;
@@ -51,7 +51,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-ink);
-  background: var(--color-marigold);
+  background: var(--color-yellow);
   border: 2px solid var(--color-ink);
   border-radius: var(--radius-pill);
   padding: 8px 16px;
@@ -60,7 +60,7 @@
 
 .h1 {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(38px, 5vw, 60px);
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -118,7 +118,7 @@
   color: var(--color-ink);
 }
 .infoLink:hover {
-  color: var(--color-cobalt);
+  color: var(--color-indigo);
 }
 
 .infoText {

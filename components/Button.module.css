@@ -22,22 +22,23 @@
 .dot {
   width: 10px;
   height: 10px;
-  background: var(--color-marigold);
+  background: var(--color-indigo);
   border-radius: 50%;
   display: inline-block;
   flex: none;
 }
 
-/* Primary: ink fill, paper text */
+/* Primary: yellow fill, ink text, ink border */
 .primary {
-  background: var(--color-ink);
-  color: var(--color-paper);
+  background: var(--color-yellow);
+  color: var(--color-ink);
   font-size: 16.5px;
-  padding: 17px 32px;
+  padding: 15px 32px;
+  border: 2px solid var(--color-ink);
 }
 .primary:hover {
-  background: var(--color-cobalt);
-  color: #ffffff;
+  background: var(--color-yellow-hover);
+  color: var(--color-ink);
 }
 
 /* Secondary: transparent, ink border */
@@ -49,13 +50,13 @@
   border: 2px solid var(--color-ink);
 }
 .secondary:hover {
-  background: var(--color-marigold);
+  background: var(--color-yellow);
   color: var(--color-ink);
 }
 
 /* On dark bands: marigold fill + ink text + ink border */
 .onDark {
-  background: var(--color-marigold);
+  background: var(--color-yellow);
   color: var(--color-ink);
   font-weight: 800;
   font-size: 17px;

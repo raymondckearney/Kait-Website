@@ -24,50 +24,54 @@
   color: var(--color-ink);
 }
 
+/* Plain text links, with Contact as an indigo pill button. */
 .links {
   display: none;
-  align-items: stretch;
+  align-items: center;
+  gap: 6px;
   font-weight: 700;
   font-size: 15px;
-  border-right: 2px solid var(--color-ink);
 }
 
 .link,
 .active {
   display: flex;
   align-items: center;
-  padding: 0 22px;
-  border-left: 2px solid var(--color-ink);
-  transition: background 0.15s, color 0.15s;
+  padding: 8px 14px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
   color: var(--color-ink);
+  text-decoration: underline 2px;
+  text-decoration-color: transparent;
+  text-underline-offset: 6px;
+  transition: background 0.15s, color 0.15s, text-decoration-color 0.15s;
 }
 
 .link:hover {
-  color: #ffffff;
+  color: var(--color-indigo);
+  text-decoration-color: var(--color-indigo);
 }
 
-.link.services:hover {
-  background: var(--color-marigold);
-  color: var(--color-ink);
+.active {
+  color: var(--color-indigo);
+  text-decoration-color: var(--color-indigo);
 }
-.link.evaluations:hover {
-  background: var(--color-cobalt);
-}
-.link.about:hover {
-  background: var(--color-red);
+
+.link.contact,
+.active.contact {
+  margin-left: 10px;
+  padding: 10px 22px;
+  background: var(--color-indigo);
+  border-color: var(--color-ink);
+  color: #ffffff;
+  text-decoration: none;
 }
 .link.contact:hover {
-  background: var(--color-green);
-}
-
-.active.evaluations {
-  background: var(--color-cobalt);
+  background: var(--color-indigo-hover);
   color: #ffffff;
 }
-
 .active.contact {
-  background: var(--color-green);
-  color: #ffffff;
+  box-shadow: 3px 3px 0 var(--color-ink);
 }
 
 .menuToggle {
@@ -116,12 +120,12 @@
 }
 
 .mobileActive.evaluations {
-  background: var(--color-cobalt);
+  background: var(--color-indigo);
   color: #ffffff;
 }
 
 .mobileActive.contact {
-  background: var(--color-green);
+  background: var(--color-indigo);
   color: #ffffff;
 }
 
@@ -148,20 +152,20 @@
 .square {
   width: 24px;
   height: 24px;
-  background: var(--color-cobalt);
+  background: var(--color-indigo);
   border-radius: 5px;
   transform: rotate(-8deg);
 }
 .ball {
   width: 25px;
   height: 25px;
-  background: var(--color-red);
+  background: var(--color-pink);
   border-radius: 50%;
 }
 .arch {
   width: 32px;
   height: 17px;
-  background: var(--color-green);
+  background: var(--color-teal);
   border-radius: 17px 17px 0 0;
 }
 
@@ -183,20 +187,21 @@
     visibility: hidden;
   }
   .scrolled .links {
-    align-items: center;
     gap: 10px;
-    border-right-color: transparent;
     pointer-events: auto;
   }
 
   .scrolled .links .link,
   .scrolled .links .active {
     gap: 0;
+    margin-left: 0;
     padding: 5px;
     border: 2px solid transparent;
     border-radius: var(--radius-pill);
     background: transparent;
+    box-shadow: none;
     color: var(--color-ink);
+    text-decoration: none;
     transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, padding 0.2s,
       gap 0.2s;
   }

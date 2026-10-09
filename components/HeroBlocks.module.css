@@ -31,47 +31,24 @@
   transform-origin: bottom center;
 }
 
+/* Cream rather than indigo: the hero background is indigo. */
 .square {
   width: 96px;
   height: 96px;
-  background: var(--color-cobalt);
+  background: var(--color-paper);
   border: var(--border-feature);
   border-radius: 13px;
   box-shadow: inset -6px -8px 0 rgba(0, 0, 0, 0.14);
+  transform: rotate(-4deg);
 }
 
 .ball {
   width: 66px;
   height: 66px;
-  background: var(--color-red);
+  background: var(--color-pink);
   border: var(--border-feature);
   border-radius: 50%;
   box-shadow: inset -6px -7px 0 rgba(0, 0, 0, 0.12);
-  position: relative;
-}
-
-.eye {
-  position: absolute;
-  top: 24px;
-  width: 6px;
-  height: 10px;
-  background: var(--color-ink);
-  border-radius: 4px;
-}
-.eyeLeft {
-  left: 18px;
-}
-.eyeRight {
-  right: 18px;
-}
-.mouth {
-  position: absolute;
-  left: 27px;
-  top: 40px;
-  width: 10px;
-  height: 5px;
-  border-bottom: 2px solid var(--color-ink);
-  border-radius: 0 0 10px 10px;
 }
 
 .triangle {
@@ -84,7 +61,7 @@
 .arch {
   width: 96px;
   height: 50px;
-  background: var(--color-green);
+  background: var(--color-teal);
   border: var(--border-feature);
   border-radius: 50px 50px 0 0;
   box-shadow: inset -6px -6px 0 rgba(0, 0, 0, 0.12);
@@ -93,7 +70,7 @@
 .smallBall {
   width: 36px;
   height: 36px;
-  background: var(--color-cobalt);
+  background: var(--color-yellow);
   border: var(--border-feature);
   border-radius: 50%;
   box-shadow: inset -3px -4px 0 rgba(0, 0, 0, 0.14);
@@ -110,6 +87,7 @@
 
 .statCard {
   background: var(--color-card);
+  color: var(--color-ink);
   border: 2px solid var(--color-ink);
   border-radius: 14px 14px 0 0;
   padding: 18px 20px 14px;
@@ -117,7 +95,7 @@
 
 .statNumber {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1;
 }
@@ -141,9 +119,6 @@
 }
 .animRise {
   animation: tumRise 0.8s backwards;
-}
-.animBlink {
-  animation: tumBlink 4.5s 3s infinite;
 }
 
 /* Desktop absolute layout — scaled down ~0.8x from the original mockup
@@ -214,23 +189,6 @@
   .ball {
     width: 56px;
     height: 56px;
-  }
-  .eye {
-    top: 20px;
-    width: 6px;
-    height: 8px;
-  }
-  .eyeLeft {
-    left: 15px;
-  }
-  .eyeRight {
-    right: 15px;
-  }
-  .mouth {
-    left: 23px;
-    top: 34px;
-    width: 8px;
-    height: 4px;
   }
   .triangle {
     width: 68px;

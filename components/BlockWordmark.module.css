@@ -12,14 +12,14 @@
 }
 
 .square {
-  background: var(--color-cobalt);
+  background: var(--color-indigo);
   border-radius: 3px;
   display: inline-block;
   transform: rotate(-8deg);
 }
 
 .ball {
-  background: var(--color-red);
+  background: var(--color-pink);
   border-radius: 50%;
   display: inline-block;
 }
@@ -29,19 +29,19 @@
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 14px solid var(--color-marigold);
+  border-bottom: 14px solid var(--color-yellow);
   display: inline-block;
 }
 
 .arch {
-  background: var(--color-green);
+  background: var(--color-teal);
   border-radius: 9px 9px 0 0;
   display: inline-block;
 }
 
 .wordText {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 

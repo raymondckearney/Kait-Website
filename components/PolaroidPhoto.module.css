@@ -42,7 +42,7 @@
 
 .captionText {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 17px;
 }
 
@@ -54,21 +54,21 @@
 .dotSquare {
   width: 13px;
   height: 13px;
-  background: var(--color-cobalt);
+  background: var(--color-indigo);
   border-radius: 3px;
   display: inline-block;
 }
 .dotBall {
   width: 13px;
   height: 13px;
-  background: var(--color-red);
+  background: var(--color-pink);
   border-radius: 50%;
   display: inline-block;
 }
 .dotArch {
   width: 14px;
   height: 8px;
-  background: var(--color-green);
+  background: var(--color-teal);
   border-radius: 8px 8px 0 0;
   display: inline-block;
 }

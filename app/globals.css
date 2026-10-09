@@ -6,18 +6,21 @@
 :root {
   /* Core */
   --color-ink: #1a1a1a;
-  --color-paper: #fffdf7;
+  --color-paper: #fbf8f1;
   --color-card: #ffffff;
   --color-body-text: #4a4a4a;
   --color-muted-text: #6e6e6e;
 
-  /* Crayon primaries */
-  --color-cobalt: #2456e6;
-  --color-cobalt-hover: #2440ac;
-  --color-red: #e23a2e;
-  --color-red-hover: #d65a4c;
-  --color-marigold: #ffc91f;
-  --color-green: #1f9d55;
+  /* Palette (Option H). Indigo is the only color that carries white
+     text; pink, yellow, and teal always take ink text. */
+  --color-indigo: #4a56c8;
+  --color-indigo-hover: #3d48ad;
+  --color-pink: #f2a0cf;
+  --color-pink-hover: #ec8bc3;
+  --color-yellow: #f7df5a;
+  --color-yellow-hover: #f2d43a;
+  --color-teal: #86dcc0;
+  --color-teal-hover: #6fd1b1;
 
   /* Misc */
   --color-error-bg: #fff0ee;
@@ -43,7 +46,7 @@
   --container-max: 1280px;
   --container-pad: 36px;
 
-  --font-display: var(--font-shantell-sans), cursive;
+  --font-display: var(--font-fraunces), Georgia, serif;
   --font-body: var(--font-atkinson), sans-serif;
 }
 
@@ -135,12 +138,12 @@ img {
 }
 
 a {
-  color: var(--color-cobalt);
+  color: var(--color-indigo);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--color-red);
+  color: var(--color-indigo-hover);
 }
 
 button {
@@ -148,7 +151,7 @@ button {
 }
 
 ::selection {
-  background: var(--color-marigold);
+  background: var(--color-yellow);
   color: var(--color-ink);
 }
 
@@ -159,7 +162,7 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 [tabindex]:focus-visible {
-  outline: 3px solid var(--color-cobalt);
+  outline: 3px solid var(--color-indigo);
   outline-offset: 2px;
 }
 
@@ -257,17 +260,6 @@ textarea:focus-visible,
   100% {
     transform: translateX(0) rotate(0deg);
     opacity: 1;
-  }
-}
-
-@keyframes tumBlink {
-  0%,
-  90%,
-  100% {
-    transform: scaleY(1);
-  }
-  95% {
-    transform: scaleY(0.1);
   }
 }
 

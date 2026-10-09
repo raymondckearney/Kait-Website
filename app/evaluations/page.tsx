@@ -21,7 +21,7 @@ const ASSESSMENT_AREAS = [
         style={{
           width: 36,
           height: 36,
-          background: "var(--color-cobalt)",
+          background: "var(--color-indigo)",
           border: "2px solid var(--color-ink)",
           borderRadius: 9,
           display: "inline-block",
@@ -38,7 +38,7 @@ const ASSESSMENT_AREAS = [
         style={{
           width: 36,
           height: 36,
-          background: "var(--color-red)",
+          background: "var(--color-pink)",
           border: "2px solid var(--color-ink)",
           borderRadius: "50%",
           display: "inline-block",
@@ -54,7 +54,7 @@ const ASSESSMENT_AREAS = [
       <Triangle
         width={36}
         height={32}
-        color="var(--color-marigold)"
+        color="var(--color-yellow)"
         strokeWidth={2}
         style={{ animation: "tumTickle 5s 1s ease-in-out infinite" }}
       />
@@ -68,7 +68,7 @@ const ASSESSMENT_AREAS = [
         style={{
           width: 40,
           height: 22,
-          background: "var(--color-green)",
+          background: "var(--color-teal)",
           border: "2px solid var(--color-ink)",
           borderRadius: "22px 22px 0 0",
           display: "inline-block",
@@ -85,7 +85,7 @@ const ASSESSMENT_AREAS = [
         style={{
           width: 36,
           height: 36,
-          background: "var(--color-marigold)",
+          background: "var(--color-yellow)",
           border: "2px solid var(--color-ink)",
           borderRadius: 9,
           transform: "rotate(-8deg)",
@@ -103,7 +103,7 @@ const ASSESSMENT_AREAS = [
         style={{
           width: 36,
           height: 36,
-          background: "var(--color-green)",
+          background: "var(--color-teal)",
           border: "2px solid var(--color-ink)",
           borderRadius: "50%",
           display: "inline-block",
@@ -163,7 +163,7 @@ export default function EvaluationsPage() {
                 <div className={styles.ageBlocks} aria-hidden="true">
                   <span className={`${styles.ageBlock} ${styles.ageBlock1}`} />
                   <span className={`${styles.ageBlock} ${styles.ageBlock2}`} />
-                  <Triangle width={44} height={40} color="var(--color-marigold)" strokeWidth={2} />
+                  <Triangle width={44} height={40} color="var(--color-yellow)" strokeWidth={2} />
                   <span className={`${styles.ageBlock} ${styles.ageBlock4}`} />
                 </div>
                 <div className={styles.ageEnds} aria-hidden="true">
@@ -175,15 +175,15 @@ export default function EvaluationsPage() {
               <div className={styles.factLabel}>Often used for</div>
               <ul className={styles.useList}>
                 <li className={styles.usePill}>
-                  <span className={styles.useDot} style={{ background: "var(--color-cobalt)" }} />
+                  <span className={styles.useDot} style={{ background: "var(--color-indigo)" }} />
                   IEP &amp; 504 plans
                 </li>
                 <li className={styles.usePill}>
-                  <span className={styles.useDot} style={{ background: "var(--color-red)" }} />
+                  <span className={styles.useDot} style={{ background: "var(--color-pink)" }} />
                   SAT/ACT &amp; college accommodations
                 </li>
                 <li className={styles.usePill}>
-                  <span className={styles.useDot} style={{ background: "var(--color-green)" }} />
+                  <span className={styles.useDot} style={{ background: "var(--color-teal)" }} />
                   School admissions
                 </li>
                 <li className={`${styles.usePill} ${styles.usePillMore}`}>and more</li>
