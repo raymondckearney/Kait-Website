@@ -36,11 +36,16 @@ export default function AnchorScrollHandler() {
         "(prefers-reduced-motion: reduce)"
       ).matches;
       target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
-      history.pushState(null, "", `${path || window.location.pathname}#${hash}`);
+      const url = `${path || window.location.pathname}#${hash}`;
+      if (window.location.hash === `#${hash}`) history.replaceState(null, "", url);
+      else history.pushState(null, "", url);
     }
 
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
+    // Capture phase: run before Next's <Link> handler. Once the URL already
+    // ends in the same #hash, Link treats the click as a no-op, so a second
+    // click on "Services" would otherwise do nothing.
+    document.addEventListener("click", handleClick, true);
+    return () => document.removeEventListener("click", handleClick, true);
   }, []);
 
   return null;

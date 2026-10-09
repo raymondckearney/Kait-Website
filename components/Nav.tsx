@@ -1,44 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import BlockWordmark from "./BlockWordmark";
-import Triangle from "./Triangle";
 import styles from "./Nav.module.css";
 
 export type ActivePage = "home" | "evaluations" | "contact";
 
-type ShapeKind = "triangle" | "square" | "ball" | "arch";
-
 // Services and About are anchors on the Home page; Evaluations and
 // Contact are standalone routes and can show as "active".
-// Each item's shape/color mirrors the matching block in the logo.
-const NAV_ITEMS: {
-  key: string;
-  label: string;
-  href: string;
-  page?: ActivePage;
-  shape: ShapeKind;
-}[] = [
-  { key: "services", label: "Services", href: "/#services", shape: "triangle" },
-  { key: "evaluations", label: "Evaluations", href: "/evaluations", page: "evaluations", shape: "square" },
-  { key: "about", label: "About", href: "/#about", shape: "ball" },
-  { key: "contact", label: "Contact", href: "/contact", page: "contact", shape: "arch" },
+const NAV_ITEMS: { key: string; label: string; href: string; page?: ActivePage }[] = [
+  { key: "services", label: "Services", href: "/#services" },
+  { key: "evaluations", label: "Evaluations", href: "/evaluations", page: "evaluations" },
+  { key: "about", label: "About", href: "/#about" },
+  { key: "contact", label: "Contact", href: "/contact", page: "contact" },
 ];
-
-const SCROLL_THRESHOLD = 40;
-
-function NavShape({ shape }: { shape: ShapeKind }) {
-  return (
-    <span className={styles.shapeSlot} aria-hidden="true">
-      {shape === "triangle" ? (
-        <Triangle width={28} height={25} color="var(--color-yellow)" strokeWidth={2} />
-      ) : (
-        <span className={`${styles.shape} ${styles[shape]}`} />
-      )}
-    </span>
-  );
-}
 
 type NavProps = {
   active?: ActivePage;
@@ -46,17 +22,9 @@ type NavProps = {
 
 export default function Nav({ active = "home" }: NavProps) {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const update = () => setScrolled(window.scrollY > SCROLL_THRESHOLD);
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    return () => window.removeEventListener("scroll", update);
-  }, []);
 
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
+    <nav className={styles.nav}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.brandLink} aria-label="Kait Kearney, PhD — home">
           <BlockWordmark />
@@ -70,8 +38,7 @@ export default function Nav({ active = "home" }: NavProps) {
                 className={`${styles.active} ${styles[item.key]}`}
                 aria-current="page"
               >
-                <NavShape shape={item.shape} />
-                <span className={styles.label}>{item.label}</span>
+                {item.label}
               </span>
             ) : (
               <Link
@@ -79,8 +46,7 @@ export default function Nav({ active = "home" }: NavProps) {
                 href={item.href}
                 className={`${styles.link} ${styles[item.key]}`}
               >
-                <NavShape shape={item.shape} />
-                <span className={styles.label}>{item.label}</span>
+                {item.label}
               </Link>
             )
           )}

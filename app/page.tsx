@@ -14,7 +14,7 @@ import styles from "./page.module.css";
 const SERVICE_CARDS = [
   {
     tone: "cobalt",
-    eyebrow: "For your child",
+    eyebrow: "Children, teens, and young adults",
     title: "Individual therapy",
     body: "Kids and teens working through what's hard in warm, structured sessions that build real skills without feeling like an appointment.",
     href: "#contact",
