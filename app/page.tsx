@@ -264,16 +264,11 @@ export default function HomePage() {
                 <Button href="/contact" variant="onDark">
                   Start with a free call
                 </Button>
-                <Button href="tel:+19295152147" variant="ghost">
-                  (929) 515-2147
-                </Button>
               </Reveal>
             </div>
             <div className={styles.ctaShapes} aria-hidden="true">
               <div className={styles.ctaShapeBig} />
               <div className={styles.ctaShapeSquare} />
-              <div className={styles.ctaShapeArch} />
-              <div className={styles.ctaShapeBall} />
             </div>
           </div>
         </section>
