@@ -225,7 +225,6 @@ export default function HomePage() {
               </Reveal>
               <Reveal as="div" className={styles.aboutPills}>
                 <span className={styles.pill}>PhD, Clinical Psychology</span>
-                <span className={styles.pill}>Licensed in New York</span>
                 <span className={styles.pill}>In-person &amp; telehealth</span>
               </Reveal>
             </div>
